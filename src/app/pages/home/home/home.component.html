@@ -1,0 +1,504 @@
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+    <div class="image-container">
+      <img
+        *ngIf="currentIndex === 0"
+        src="../../../../assets/images/IMG-20250120-WA0026.jpg"
+        class="anim-slide-top"
+        alt="Innovators"
+      />
+
+      <img
+        *ngIf="currentIndex === 1"
+        src="../../../../assets/images/IMG-20250120-WA0027.jpg"
+        class="anim-slide-top"
+        alt="Visionaries"
+      />
+      <img
+        *ngIf="currentIndex === 2"
+        src="../../../../assets/images/IMG-20250120-WA0028.jpg"
+        class="anim-slide-top"
+        alt="Creators"
+      />
+      <img
+      *ngIf="currentIndex === 3"
+      src="../../../../assets/images/IMG-20250120-WA0030.jpg"
+      class="anim-slide-top"
+      alt="Innovators"
+    />
+
+    <img
+      *ngIf="currentIndex === 4"
+      src="../../../../assets/images/IMG-20250120-WA0031.jpg"
+      class="anim-slide-top"
+      alt="Visionaries"
+    />
+    <img
+      *ngIf="currentIndex === 5"
+      src="../../../../assets/images/IMG-20250120-WA0029.jpg"
+      class="anim-slide-top"
+      alt="Creators"
+    />
+
+    </div>
+
+    <div class="video-overlay header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="caption">
+              <!-- Slide from Left -->
+              <h6 class="anim-slide-left">{{ currentHeading }}</h6>
+
+              <!-- Slide from Right -->
+              <h2 class="anim-slide-right">
+                Welcome to Morrhtech Solutions
+              </h2>
+
+              <!-- Slide from Top -->
+              <p [innerHTML]="displayedDescription" class="anim-slide-top"></p>
+              <br />
+
+              <!-- Slide from Bottom -->
+              <div class="main-button-red anim-slide-bottom mb-5">
+                <div class="scroll-to-section">
+                  <a href="/services">Get started</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ***** Main Banner Area End ***** -->
+<section class="services" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="owl-service-item owl-carousel">
+
+          <!-- Custom Web Development -->
+          <div class="item">
+            <div class="icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="down-content">
+              <h4 class="taglineintro animfadeIn" data-time="2200">Custom Web Development</h4>
+              <p class="height">Build a dynamic online presence with our expertly crafted websites tailored to your business needs.</p>
+              <div class="main-button-red">
+                <div class="scroll-to-section">
+              <a href="#custom-web-development" class="cta-button">Learn More</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <!-- Mobile App Development -->
+          <div class="item">
+            <div class="icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="down-content">
+              <h4>Mobile App Development</h4>
+              <p class="height">Deliver seamless experiences with custom mobile apps designed for Android and iOS platforms.</p>
+              <div class="main-button-red">
+                <div class="scroll-to-section">
+              <a href="#mobile-app-development" class="cta-button">Explore Services</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <!-- IT Staffing & Recruitment -->
+          <div class="item">
+            <div class="icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="down-content">
+              <h4>IT Staffing & Recruitment</h4>
+              <p class="height">Find the right talent for your IT needs with our specialized recruitment and staffing solutions.</p>
+              <div class="main-button-red">
+                <div class="scroll-to-section">
+              <a href="#it-staffing" class="cta-button">Hire Talent</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <!-- IT Consulting & Strategy -->
+          <div class="item">
+            <div class="icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="down-content">
+              <h4>IT Consulting & Strategy</h4>
+              <p class="height">Drive innovation and efficiency with our expert IT consulting services tailored to your goals.</p>
+              <div class="main-button-red">
+                <div class="scroll-to-section">
+              <a href="#it-consulting" class="cta-button">Get Started</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+          <!-- Training & Upskilling -->
+          <div class="item">
+            <div class="icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="down-content">
+              <h4>Training & Upskilling</h4>
+              <p class="height">Empower yourself or your team with hands-on training in web development, cybersecurity, data analysis, and more.</p>
+              <div class="main-button-red">
+                <div class="scroll-to-section">
+              <a href="#training-upskilling" class="cta-button">View Courses</a>
+            </div>
+          </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="upcoming-meetings" id="meetings">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading">
+          <h2>Our Services</h2>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="categories">
+          <h4>Services Catgories</h4>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Mobile App Development</a></li>
+            <li><a href="#">IT Consulting</a></li>
+            <li><a href="#">IT Staffing & Recruitment</a></li>
+            <li><a href="#">Training & Upskilling</a></li>
+          </ul>
+          <div class="main-button-red">
+            <a href="/meeting">Explore All Our Services</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="meeting-item">
+              <div class="thumb">
+                <!-- <div class="price">
+                  <span>$22.00</span>
+                </div> -->
+                <a href="/meeting-detail"><img src="../../../../assets/images/webDevelopment.jpg" alt="New Lecturer Meeting"></a>
+              </div>
+              <div class="down-content">
+                <!-- <div class="date">
+                  <h6>Nov <span>10</span></h6>
+                </div> -->
+                <a href="/meeting-detail"><h4>Web Development Workshop</h4></a>
+                <p>Build dynamic websites and web applications with hands-on training.</p>
+                <p>Master the latest web technologies with our expert instructors.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="meeting-item">
+              <div class="thumb">
+                <!-- <div class="price">
+                  <span>$36.00</span>
+                </div> -->
+                <a href="/meeting-detail"><img src="../../../../assets/images/mobileApp.jpg" alt="Online Teaching"></a>
+              </div>
+              <div class="down-content">
+                <!-- <div class="date">
+                  <h6>Nov <span>24</span></h6>
+                </div> -->
+                <a href="/meeting-detail"><h4>Mobile App Development Training</h4></a>
+                <p>Learn how to develop custom mobile apps for both Android and iOS platforms.</p>
+                <p>Hands-on learning with real-world app development projects.                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="meeting-item remaining">
+              <div class="thumb">
+                <!-- <div class="price">
+                  <span>$14.00</span>
+                </div> -->
+                <a href="/meeting-details"><img src="../../../../assets/images/cyberSecurity.jpg" alt="Higher Education"></a>
+              </div>
+              <div class="down-content">
+                <!-- <div class="date">
+                  <h6>Nov <span>26</span></h6>
+                </div> -->
+                <a href="/meeting-detail"><h4>Cybersecurity Essentials                </h4></a>
+                <p>Understand the basics of protecting networks, applications, and data.</p>
+                <p>Gain practical knowledge of the latest cybersecurity tools and threats.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="meeting-item remaining">
+              <div class="thumb">
+                <!-- <div class="price">
+                  <span>$48.00</span>
+                </div> -->
+                <a href="/meeting-detail"><img src="../../../../assets/images/Dash_Tail UI Concept.jpg" alt="Student Training"></a>
+              </div>
+              <div class="down-content">
+                <!-- <div class="date">
+                  <h6>Nov <span>30</span></h6>
+                </div> -->
+                <a href="/meeting-detail"><h4>Data Analysis with Machine Learning</h4></a>
+                <p>Unlock the power of data with hands-on experience in analysis and machine learning.</p>
+                <p>Learn how to analyze data and create predictive models.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="apply-now" id="apply">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="item" style="background-color: black; border: 2px solid #FFD700; border-radius: 7px;">
+              <h3>Join Our Web Development Bootcamp </h3>
+              <p>Kickstart your journey in web development with our comprehensive bootcamp. Learn HTML, CSS, JavaScript, and frameworks like Angular, all in one place. Get hands-on experience with real-world projects.</p>
+              <div class="main-button-red">
+                <div class="scroll-to-section"><a href="#contact">Enroll Now!</a></div>
+            </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="item" style="background-color: black; border: 2px solid #FFD700; border-radius: 5px;">
+              <h3>Upskill in Cybersecurity</h3>
+              <p>Enhance your skills in cybersecurity by learning how to protect networks, applications, and data from modern threats. Our expert-led training equips you to secure your digital environment.</p>
+              <div class="main-button-yellow">
+                <div class="scroll-to-section"><a href="#contact">Get Started!</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="accordions">
+          <article class="accordion" *ngFor="let accordion of accordions; let i = index">
+            <div
+              class="accordion-head"
+              [class.open]="activeIndex === i"
+              (click)="toggleAccordion(i)"
+            >
+              <span>{{ accordion.title }}</span>
+              <span class="icon">
+                <i
+                  class="fa"
+                  [ngClass]="{
+                    'fa-chevron-down': activeIndex === i,
+                    'fa-chevron-right': activeIndex !== i
+                  }"
+                ></i>
+              </span>
+            </div>
+            <div class="accordion-body" #body [class.active]="activeIndex === i">
+              <div class="content">
+                <p>{{ accordion.content }}</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="our-courses" id="courses">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading">
+          <h2>Explore Our Training Programs</h2>
+        </div>
+      </div>
+      <div class="col-lg-12" >
+        <div class="owl-courses-item owl-carousel">
+          <div class="item"  >
+            <img src="../../../../assets/images/webDevelopment.jpg" alt="Course One">
+            <div class="down-content"  >
+              <h4>Web Development</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Learn to build responsive and dynamic websites using HTML, CSS, JavaScript, and Angular.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/full-stack.jpg" alt="Course Two">
+            <div class="down-content">
+              <h4>Full-Stack Development</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Master both frontend and backend technologies for a complete web development experience.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/app-dev.jpg" alt="Course Three">
+            <div class="down-content">
+              <h4>Mobile App Development</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Create innovative apps for Android and iOS using React Native.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/cyberSEC.jpg" alt="Course Four">
+            <div class="down-content">
+              <h4>Cybersecurity Training</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Protect networks, systems, and data with essential cybersecurity skills.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/ui ux design.jpg" alt="Course Five">
+            <div class="down-content">
+              <h4>UI/UX Design</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Design user-friendly and visually appealing interfaces for websites and apps.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/data analysis.jpeg" alt="Course Six">
+            <div class="down-content">
+              <h4>Data Analysis with Machine Learning</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Gain insights from data and build predictive models with machine learning tools.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/cloud.jpeg" alt="Course Seven">
+            <div class="down-content">
+              <h4>Cloud Engineering</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Learn cloud technologies and deployment strategies for modern applications.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/IT consulting.webp" alt="Course Eight">
+            <div class="down-content">
+              <h4>IT Consulting</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Understand how to analyze and solve IT challenges for businesses.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/it staff.webp" alt="Course Nine">
+            <div class="down-content">
+              <h4>IT Staffing & Recruitment</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Gain knowledge of how to match IT talent with the right projects.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/custom.webp" alt="Course Ten">
+            <div class="down-content">
+              <h4>Custom Software Development</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Learn the essentials of developing software tailored to business needs.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/backend2.jpg" alt="Course Eleven">
+            <div class="down-content">
+              <h4>Backend Development</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Dive deep into server-side programming with Node.js or Laravel.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/front-end.jpg" alt="Course Twelve">
+            <div class="down-content">
+              <h4>Frontend Development</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Focus on building beautiful and functional user interfaces.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/vun.webp" alt="Course Thirteen">
+            <div class="down-content">
+              <h4>Vulnerability Management</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Learn to identify, assess, and mitigate security vulnerabilities.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="../../../../assets/images/web.3.jpg" alt="Course Fourteen">
+            <div class="down-content">
+              <h4>Web3 Development</h4>
+              <p style="width: 350px; justify-content: center; padding: 20px;">Explore the future of decentralized applications and blockchain technology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="our-facts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>What You Should Know About Us</h2>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="count-area-content">
+                  <div class="count-digit">205</div>
+                  <div class="count-title">Projects Delivered</div>
+                  <p>Successful web and software projects completed.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="count-area-content">
+                  <div class="count-digit">307</div>
+                  <div class="count-title">Expert Trainers</div>
+                  <p>Skilled professionals guiding our students.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="count-area-content new-students">
+                  <div class="count-digit">5079</div>
+                  <div class="count-title">Students Trained</div>
+                  <p>Aspiring tech professionals empowered through our programs.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="count-area-content">
+                  <div class="count-digit">12</div>
+                  <div class="count-title">Global Partnerships</div>
+                  <p>Proud partners with CompTIA and other industry leaders.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 align-self-center">
+        <div class="video">
+          <video #bgVideo class="video-content"  controls>
+            <source src="../../../../assets/images/morrhtechVideo2.mp4" type="video/mp4"  />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

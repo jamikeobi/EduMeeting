@@ -1,0 +1,257 @@
+.header-area .btn {
+  background-color: #FFD700;
+  color: #000;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-area .btn:hover {
+  background-color: #000;
+  color: #FFD700;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-trigger {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-trigger span {
+  color: #FFD700;
+  font-size: 20px;
+}
+
+.menu-trigger.active span {
+  color: #FFF;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+      display: none;
+  }
+
+  .nav {
+      display: none;
+  }
+
+  .menu-trigger {
+      display: block;
+
+  }
+
+  .menu-trigger.active + .nav {
+      display: flex;
+      flex-direction: column;
+      background-color: #FFF;
+  }
+
+  .nav li {
+      margin: 10px 0;
+  }
+}
+
+/* Base styles for the main menu */
+.has-sub {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+}
+
+.has-sub > a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.has-sub > a:hover {
+
+}
+
+/* Styles for dropdown menu */
+.sub-menu {
+  position: absolute;
+  height: auto;
+  max-height: none; /* Ensures enough space */
+  overflow-y: auto; /* Enables scrolling if needed */
+  overflow: auto;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: none;
+  z-index: 9999;
+  padding: 10px 0;
+  list-style: none;
+  min-width: 250px;
+
+}
+
+.has-sub:hover > .sub-menu {
+    display: block;
+}
+
+.sub-menu .has-sub:hover > .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+
+}
+
+.sub-menu li a {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  padding: 10px 20px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+
+}
+
+.items {
+  top: -20px;
+}
+
+.items li a {
+  background-color: #f1f1f1;
+  width: 320px;
+  padding: 10px; /* Use padding instead of fixed height */
+  display: block;
+  height: auto;
+}
+
+.items li a:hover {
+  background-color: #000;
+  color: #FFD700;
+}
+
+.sub-menu li a:hover {
+  background-color: #000;
+  color: #FFD700;
+}
+
+.sub-menu > .has-sub > .sub-menu li a:hover {
+  background-color: #000;
+  color: #FFD700;
+}
+
+/* Nested submenu */
+.sub-menu > li {
+  width: 250px;
+}
+
+.sub-menu .has-sub > a:after {
+  float: right;
+  margin-left: 10px;
+}
+
+.sub-menu .has-sub .sub-menu {
+  top: -10px;
+  left: 100%;
+  display: none;
+  width: 320px;
+  height: 700px;
+}
+
+/* Show dropdown on hover */
+.has-sub:hover > .sub-menu {
+  display: block;
+}
+
+.sub-menu .has-sub:hover > .sub-menu {
+  display: block;
+  top: -10px;
+}
+
+/* Additional styling */
+.sub-menu {
+  border-radius: 4px;
+}
+
+.sub-menu li {
+  margin: 0;
+}
+
+.sub-menu li a {
+  font-size: 14px;
+}
+
+.sub-menu .has-sub > a {
+  font-weight: normal;
+}
+
+
+
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+
+.mobile-menu {
+
+  height: 100vh;
+  margin-top: 30px;
+}
+
+@media (max-width: 766px){
+  .mobile-menu
+  {
+    display: none
+  }
+  .mobile-menu.show {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav
+{
+  background-color: white;
+  overflow: auto;
+  height: 800px;
+  width: 300px;
+  padding: 10px;
+  justify-content: left;
+  text-align: left;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav li a {
+  line-height: 25px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.menu-trigger {
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-nav {
+      display: none;
+  }
+  .menu-trigger {
+      display: block;
+  }
+  .mobile-nav {
+      display: block;
+  }
+  .mobile-nav.active {
+      display: block;
+  }
+}
+

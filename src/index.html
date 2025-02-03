@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Education Meeting Angular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="./assets/css/fontawesome.css">
+  <link rel="stylesheet" href="./assets/css/templatemo-edu-meeting.css">
+  <link rel="stylesheet" href="./assets/css/owl.css">
+  <link rel="stylesheet" href="./assets/css/lightbox.css">
+</head>
+<body>
+  <app-root></app-root>
+
+
+
+   <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="./assets/vendor/jquery/jquery.min.js"></script>
+  <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.html"></script>
+
+  <script src="./assets/js/isotope.min.js"></script>
+  <script src="./assets/js/owl-carousel.js"></script>
+  <script src="./assets/js/lightbox.js"></script>
+  <script src="./assets/js/tabs.js"></script>
+  <script src="./assets/js/video.js"></script>
+  <script src="./assets/js/slick-slider.js"></script>
+  <script src="./assets/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Include Isotope -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+  <script>
+      //according to loftblog tut
+      $('.nav li:first').addClass('active');
+
+      var showSection = function showSection(section, isAnimate) {
+        var
+        direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $('body, html').animate({
+            scrollTop: reqSectionPos },
+          800);
+        } else {
+          $('body, html').scrollTop(reqSectionPos);
+        }
+
+      };
+
+      var checkSection = function checkSection() {
+        $('.section').each(function () {
+          var
+          $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var
+            currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+            reqLink.closest('li').addClass('active').
+            siblings().removeClass('active');
+          }
+        });
+      };
+
+      $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+        e.preventDefault();
+        showSection($(this).attr('href'), true);
+      });
+
+      $(window).scroll(function () {
+        checkSection();
+      });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const accordions = document.querySelectorAll(".accordion");
+
+  accordions.forEach((accordion) => {
+    const head = accordion.querySelector(".accordion-head");
+    const body = accordion.querySelector(".accordion-body");
+
+    head.addEventListener("click", () => {
+      const isOpen = body.classList.contains("active");
+
+      // Close all other accordions
+      document.querySelectorAll(".accordion-body").forEach((otherBody) => {
+        if (otherBody !== body) {
+          otherBody.classList.remove("active");
+          otherBody.style.maxHeight = null;
+          otherBody.parentElement.querySelector(".accordion-head").classList.remove("open");
+        }
+      });
+
+      // Toggle current accordion
+      if (!isOpen) {
+        body.classList.add("active");
+        body.style.maxHeight = body.scrollHeight + "px"; // Dynamically set height to fit content
+        head.classList.add("open");
+      } else {
+        body.classList.remove("active");
+        body.style.maxHeight = null; // Collapse the accordion
+        head.classList.remove("open");
+      }
+    });
+  });
+});
+
+  </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Isotope
+  const grid = document.querySelector(".grid");
+  const iso = new Isotope(grid, {
+    itemSelector: ".templatemo-item-col",
+    layoutMode: "fitRows", // You can change this to "masonry" for a different effect
+  });
+
+  // Filter Items on Button Click
+  const filterButtons = document.querySelectorAll(".filters li");
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove 'active' class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      // Add 'active' class to the clicked button
+      this.classList.add("active");
+
+      // Get filter value from the button's data attribute
+      const filterValue = this.getAttribute("data-filter");
+      iso.arrange({ filter: filterValue });
+    });
+  });
+});
+
+</script>
+
+<script>
+  window.addEventListener('load', () => {
+    const video = document.getElementById('bg-video');
+    if (video) {
+        // Attempt to play the video programmatically
+        video.play().then(() => {
+            console.log("Video is playing successfully.");
+        }).catch(error => {
+            console.error("Video playback failed:", error);
+            // Fallback: Add a click event listener to start playback
+            document.body.addEventListener('click', () => {
+                video.play();
+            }, { once: true }); // Only trigger once
+        });
+    }
+});
+
+</script>
+<script>
+  $(document).ready(function () {
+    $('.owl-service-item').owlCarousel({
+      items: 1,               // Number of items to display
+      loop: true,             // Enable infinite loop
+      autoplay: true,         // Enable autoplay
+      autoplayTimeout: 3000,  // Time between slides (in milliseconds)
+      autoplayHoverPause: true, // Pause autoplay when hovering
+      nav: false,             // Hide navigation arrows
+      dots: true              // Show navigation dots
+    });
+  });
+</script>
+
+<script>
+  $(window).on('load', function () {
+  // Reinitialize the grid after the page loads
+  $('.grid').isotope({
+    itemSelector: '.templatemo-item-col',
+    layoutMode: 'fitRows',
+  });
+});
+
+</script>
+</body>
+</html>

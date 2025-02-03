@@ -1,0 +1,218 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-section .content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding-top: 15%;
+}
+.hero-section .content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-section .content p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+.hero-section .content a {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+}
+.section-header {
+  margin-bottom: 2rem;
+}
+.icon-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.icon-card i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+.icon-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.icon-card p {
+  color: #6c757d;
+}
+.process-step {
+  text-align: center;
+}
+.process-step i {
+  padding-top: 20px;
+
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+.process-step h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+  padding-bottom: 20px;
+}
+.process-step p {
+  color: #6c757d;
+}
+.form-section {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+
+
+/*  */
+
+.web-development-services {
+    margin: 0;
+    border: 2px solid #FFD700;
+    background-color: black; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  }
+
+  .web-development-services h3 {
+    margin-top: 20px;
+    color: #FFD700;
+    font-weight: 600; /* Bold heading */
+    margin-bottom: 10px; /* Spacing between heading and content */
+    transition: 0.5s all ease-in-out;
+    cursor: pointer;
+  }
+  .web-development-services h3:hover{
+    color: #fff;
+  }
+  .web-development-services p {
+    color: whitesmoke;
+    padding: 20px;
+    font-size: 1.1rem; /* Slightly larger text */
+    line-height: 1.6; /* Improve readability */
+  }
+
+
+  h3.text-primary {
+    color: #FFD700 !important; /* Bootstrap's primary color */
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+  .thumb img{
+    height: 300px;
+  }
+  .down-content{
+    background-color: black;
+    height: 100px;
+    transition: 0.5s all ease-in-out;
+  }
+  a h4{
+    color: #FFD700;
+  }
+
+  .tech-logo {
+    max-width: 100px;
+    height: auto;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .tech-logo:hover {
+    transform: scale(1.1);
+  }
+
+  .cta {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .cta h3 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .cta .btn-primary {
+    background-color: #FFD700;
+    color: #000 !important;
+    border: 2px solid #000;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 30px;
+  }
+
+
+  /* Logo slider container */
+.logo-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 120px; /* Increased height for better visibility */
+    background-color: transparent; /* Optional background color */
+    display: flex;
+    align-items: center;
+  }
+
+  /* Track containing the logos */
+  .logo-track {
+    display: flex;
+    gap: 20px; /* Add consistent spacing between logos */
+    animation: scroll 20s linear infinite; /* Continuous animation */
+    width: calc(100% * 2); /* Double width for infinite scroll effect */
+  }
+
+  /* Logo styling */
+  .tech-logo {
+    width: 100px; /* Adjusted for better visibility */
+    height: 100px;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .tech-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Animation keyframes */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+

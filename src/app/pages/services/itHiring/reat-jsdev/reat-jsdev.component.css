@@ -1,0 +1,237 @@
+
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.btn-gold {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: black;
+}
+
+.section {
+  padding: 40px 20px;
+}
+
+.section h2 {
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #222;
+  border: 1px solid #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+}
+
+.card h5, .card p {
+  color: white;
+}
+
+.form-control, .form-select {
+  background-color: white;
+  color: black;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: gold;
+  box-shadow: none;
+}
+
+
+
+
+.hero {
+background: linear-gradient(135deg, #333, #444), url('https://via.placeholder.com/1920x1080');
+background-size: cover;
+background-position: center;
+padding: 60px 20px;
+text-align: center;
+color: #FFD700;
+}
+
+.hero h2 {
+font-size: 2rem; /* Adjusted for consistent styling */
+margin-bottom: 10px;
+}
+
+.hero .tagline {
+visibility: hidden;
+opacity: 0;
+transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out;
+}
+
+.hero .tagline.animate__fadeInUp {
+visibility: visible;
+opacity: 1;
+}
+
+.btn-gold {
+background-color: #FFD700;
+color: black;
+border: none;
+margin-bottom: 30px;
+}
+
+.btn-gold:hover {
+background-color: black;
+color: #FFD700;
+}
+.hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('../../../../../assets/images/angularDev.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #FFD700;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  animation: slideIn 1.5s ease-out forwards;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s 1s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-button {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: popIn 2s 2s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Text Color for Testimonials */
+.carousel-item p {
+font-size: 1.2rem; /* Make the text more prominent */
+font-weight: 500; /* Stronger text weight */
+line-height: 1.6; /* Improve text readability */
+text-align: center; /* Center align the text */
+padding: 20px 30px; /* Add spacing around the text */
+color: white; /* Change text color to white */
+}
+
+/* Ensure the carousel controls stand out against dark background */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+filter: invert(1); /* Make navigation icons light for better contrast on dark backgrounds */
+}
+
+.carousel-control-prev, .carousel-control-next {
+background-color: rgba(0, 0, 0, 0.5); /* Slight dark background for carousel controls */
+border-radius: 50%;
+padding: 10px;
+}
+
+.carousel-inner {
+border-radius: 10px; /* Rounded corners for a smooth look */
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.1); /* Lightened background within the carousel */
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to lift the carousel off the background */
+}
+
+/* Optional: Add a smooth transition to the carousel */
+.carousel-inner {
+transition: all 0.5s ease-in-out;
+}
+.container{
+background-color: black;
+border: #FFD700 2px solid;
+}
+h2 {
+  padding: 10px;
+  color: #FFD700;
+}
+p{
+  padding: 10px;
+  color: white;
+ 
+}
+ul{
+  padding: 10px;
+  padding-bottom: 20px;
+}
+.section {
+padding: 50px 0;
+}
+.carousel-item p {
+font-size: 1.2rem;
+font-style: italic;
+}
+.services{
+margin-top: 40px;
+
+}

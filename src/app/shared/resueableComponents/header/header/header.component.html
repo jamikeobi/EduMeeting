@@ -1,0 +1,258 @@
+
+
+<!-- ***** Header Area End ***** -->
+
+<!-- Sub Header -->
+<div class="sub-header">
+    <div class="container">
+      <app-slider></app-slider>
+    </div>
+  </div>
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+  <div class="container">
+      <div class="row align-items-center">
+          <!-- Top Section: Logo and Search Bar -->
+          <div class="col-12 d-flex justify-content-between align-items-center ">
+              <!-- Logo -->
+              <a href="/home" class="logo">
+                  <img src="../../../../../assets/images/logo1.png" alt="Morrhtech Logo" style="width: 100px; height: 70px; margin-top: 10px;">
+              </a>
+
+            <!-- Hamburger Menu -->
+            <button id="hamburger" class="menu-trigger">
+              <span>Menu</span>
+          </button>
+
+              <nav class="main-nav">
+                  <!-- ***** Menu Start ***** -->
+                  <ul class="nav">
+                      <li class="scroll-to-section"><a href="/home" class="active">Home</a></li>
+                      <li class="scroll-to-section"><a href="/about">About Us</a></li>
+                      <li class="has-sub">
+                          <a href="javascript:void(0)">Services</a>
+                          <ul class="sub-menu">
+                             <!-- IT Hiring -->
+                            <li class="has-sub">
+                                <a href="javascript:void(0)">IT Hiring</a>
+                                <ul class="sub-menu items">
+                                    <li style="height: 35px;"><a href="/services/angular-developer" style="line-height: 1;">Angular Developer</a></li>
+                                    <li  style="height: 35px;"><a href="/services/react-developer" style="line-height: 1;">React.js Developer</a></li>
+                                    <li style="height: 35px;"><a href="/services/python-developer" style="line-height: 1;">Python Developer</a></li>
+                                    <li style="height: 35px;"><a href="/services/nodejs-developer" style="line-height: 1;">Node.js Developer</a></li>
+                                    <li  style="height: 35px;"><a href="/services/laravel-developer" style="line-height: 1;">Laravel Developer</a></li>
+                                </ul>
+                            </li> <br>
+                           <!-- Software Development -->
+                            <li class="has-sub">
+                                <a href="javascript:void(0)">Software Development</a>
+                                <ul class="sub-menu items">
+                                    <li><a href="/services/web-development">Web Development</a></li>
+                                    <li><a href="/services/custom-software">Custom Software Development</a></li>
+                                    <li><a href="/services/mobile-app">Mobile App Development</a></li>
+                                </ul>
+                            </li> <br>
+                            <!-- Tech Talent -->
+                            <li class="has-sub">
+                                <a href="javascript:void(0)">Tech Talent</a>
+                                <ul class="sub-menu items">
+                                    <li><a href="/services/it-talent-acquisition">IT Talent Acquisition</a></li>
+                                    <li><a href="/services/it-staffing-recruitment">IT Staffing and Recruitment</a></li>
+                                </ul>
+                            </li>
+                            <!-- Tech Consulting -->
+                            <li><a href="/services/tech-consulting">Tech Consulting</a></li>
+                        </ul>
+                      </li>
+                      <li class="has-sub">
+                          <a href="javascript:void(0)">Training</a>
+                          <ul class="sub-menu">
+                              <li><a href="/training/web-development">Web Development</a></li>
+                              <li><a href="/training/mobile-app">Mobile App Development</a></li>
+                              <li><a href="/training/cyber-security">Cyber Security</a></li>
+                              <li><a href="/training/data-analysis">Data Analysis</a></li>
+                              <li><a href="/training/ui-ux">UI/UX</a></li>
+                          </ul>
+                      </li>
+                      <li class="scroll-to-section"><a href="/portfolio">Portfolio</a></li>
+                      <li class="scroll-to-section"><a href="/contact">Contact Us</a></li>
+                      <div class="main-button-red anim-slide-bottom">
+                        <div class="scroll-to-section">
+                        <a href="/book-session"
+                         >Book a Session</a>
+                      </div>
+                      </div>
+                  </ul>
+                  <a class='menu-trigger'>
+                      <span>Menu</span>
+                  </a>
+                  <!-- ***** Menu End ***** -->
+              </nav>
+          </div>
+      </div>
+  </div>
+
+  <div id="mobile-navbar" class="hidden">
+    <nav class="mobile-nav">
+        <ul class="space-y-4">
+
+               <li>
+                <a class="block text-gray-700 hover:text-yellow-500" href="/home">
+                 Home
+                </a>
+               </li>
+               <li>
+                <a class="block text-gray-700 hover:text-yellow-500" href="/about">
+                 About Us
+                </a>
+               </li>
+               <li class="relative">
+                <a class="block text-gray-700 hover:text-yellow-500 cursor-pointer flex items-center" id="mobile-services-dropdown">
+                 Services
+                 <i class="fas fa-chevron-down ml-1">
+                 </i>
+                </a>
+                <ul class="ml-4 mt-2 space-y-2 hidden" id="mobile-services-menu" style="margin-left: 20px;">
+                 <li class="relative">
+                  <a class="block text-gray-700 hover:text-yellow-500 cursor-pointer flex items-center" id="mobile-software-dropdown">
+                   Software Development
+                   <i class="fas fa-chevron-right ml-1">
+                   </i>
+                  </a>
+                  <ul class="ml-4 mt-2 space-y-2 hidden" id="mobile-software-menu" style="margin-left: 20px;">
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/web-development">
+                     Web Development
+                    </a>
+                   </li>
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/custom-software">
+                     Custom Software Development
+                    </a>
+                   </li>
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/mobile-app">
+                     Mobile App Development
+                    </a>
+                   </li>
+                  </ul>
+                 </li>
+                 <li class="relative">
+                  <a class="block text-gray-700 hover:text-yellow-500 cursor-pointer flex items-center" id="mobile-it-hiring-dropdown">
+                   IT Hiring
+                   <i class="fas fa-chevron-right ml-1">
+                   </i>
+                  </a>
+                  <ul class="ml-4 mt-2 space-y-2 hidden" id="mobile-it-hiring-menu" style="margin-left: 20px;">
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/angular-developer">
+                     Angular Developer
+                    </a>
+                   </li>
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/react-developer">
+                     React.js Developer
+                    </a>
+                   </li>
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/python-developer">
+                     Python Developer
+                    </a>
+                   </li>
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/nodejs-developer">
+                     Node.js Developer
+                    </a>
+                   </li>
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/laravel-developer">
+                     Laravel Developer
+                    </a>
+                   </li>
+                  </ul>
+                 </li>
+                 <li class="relative">
+                  <a class="block text-gray-700 hover:text-yellow-500 cursor-pointer flex items-center" id="mobile-tech-talent-dropdown">
+                   Tech Talent
+                   <i class="fas fa-chevron-right ml-1">
+                   </i>
+                  </a>
+                  <ul class="ml-4 mt-2 space-y-2 hidden" id="mobile-tech-talent-menu" style="margin-left: 20px;">
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/it-talent-acquisition">
+                     IT Talent Acquisition
+                    </a>
+                   </li>
+                   <li>
+                    <a class="block text-gray-700 hover:text-yellow-500" href="/services/it-staffing-recruitment">
+                     IT Staffing and Recruitment
+                    </a>
+                   </li>
+                  </ul>
+                 </li>
+                 <li>
+                  <a class="block text-gray-700 hover:text-yellow-500" href="/services/tech-consulting">
+                   Tech Consulting
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li class="relative">
+                <a class="block text-gray-700 hover:text-yellow-500 cursor-pointer flex items-center" id="mobile-training-dropdown">
+                 Training
+                 <i class="fas fa-chevron-down ml-1">
+                 </i>
+                </a>
+                <ul class="ml-4 mt-2 space-y-2 hidden" id="mobile-training-menu" style="margin-left: 20px;">
+                 <li>
+                  <a class="block text-gray-700 hover:text-yellow-500" href="/training/web-development">
+                   Web Development
+                  </a>
+                 </li>
+                 <li>
+                  <a class="block text-gray-700 hover:text-yellow-500" href="/training/mobile-app">
+                   Mobile App Development
+                  </a>
+                 </li>
+                 <li>
+                  <a class="block text-gray-700 hover:text-yellow-500" href="/training/cyber-security">
+                   Cyber Security
+                  </a>
+                 </li>
+                 <li>
+                  <a class="block text-gray-700 hover:text-yellow-500" href="/training/data-analysis">
+                   Data Analysis
+                  </a>
+                 </li>
+                 <li>
+                  <a class="block text-gray-700 hover:text-yellow-500" href="/training/ui-ux">
+                   UI/UX
+                  </a>
+                 </li>
+                </ul>
+               </li>
+               <li>
+                <a class="block text-gray-700 hover:text-yellow-500" href="/portfolio">
+                 Portfolio
+                </a>
+               </li>
+               <li>
+                <a class="block text-gray-700 hover:text-yellow-500" href="/contact">
+                 Contact Us
+                </a>
+               </li>
+
+          
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+</header>
+<!-- ***** Header Area End ***** -->
+
+

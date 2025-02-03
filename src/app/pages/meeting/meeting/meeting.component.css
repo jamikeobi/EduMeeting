@@ -1,0 +1,7 @@
+section#meetings .templatemo-item-col {
+    margin-bottom: 20px !important; /* Use !important to override conflicting styles */
+  }
+  
+  .pagination ul li{
+    padding: 5px;
+  }
