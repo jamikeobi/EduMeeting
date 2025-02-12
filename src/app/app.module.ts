@@ -21,6 +21,7 @@ import { LaravelDevComponent } from './pages/services/itHiring/laravel-dev/larav
 import { ItTalentAcquisitionComponent } from './pages/services/techTalent/it-talent-acquisition/it-talent-acquisition.component';
 import { ItStaffingAndRecruitmentComponent } from './pages/services/techTalent/it-staffing-and-recruitment/it-staffing-and-recruitment.component';
 import { TechConsultingComponent } from './pages/services/techConsulting/tech-consulting/tech-consulting.component';
+import { TrainingWebDevelopmentComponent } from './pages/training/training-web-development/training-web-development.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { TechConsultingComponent } from './pages/services/techConsulting/tech-co
     LaravelDevComponent,
     ItTalentAcquisitionComponent,
     ItStaffingAndRecruitmentComponent,
-    TechConsultingComponent
+    TechConsultingComponent,
+    TrainingWebDevelopmentComponent
   ],
   imports: [
     BrowserModule,

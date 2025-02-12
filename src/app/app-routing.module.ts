@@ -15,6 +15,7 @@ import { LaravelDevComponent } from './pages/services/itHiring/laravel-dev/larav
 import { ItTalentAcquisitionComponent } from './pages/services/techTalent/it-talent-acquisition/it-talent-acquisition.component';
 import { ItStaffingAndRecruitmentComponent } from './pages/services/techTalent/it-staffing-and-recruitment/it-staffing-and-recruitment.component';
 import { TechConsultingComponent } from './pages/services/techConsulting/tech-consulting/tech-consulting.component';
+import { TrainingWebDevelopmentComponent } from './pages/training/training-web-development/training-web-development.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -38,6 +39,9 @@ const routes: Routes = [
   {path: 'services/it-talent-acquisition', component: ItTalentAcquisitionComponent},
   {path: 'services/it-staffing-recruitment', component: ItStaffingAndRecruitmentComponent},
 
+
+  // Training
+  {path: 'training/web-development', component: TrainingWebDevelopmentComponent},
   
   {path: 'services/tech-consulting', component: TechConsultingComponent}
 ];

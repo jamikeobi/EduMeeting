@@ -1,0 +1,174 @@
+.container {
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Ensure accordion button follows Bootstrap styling */
+.accordion-button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background-color: whitesmoke !important;
+    color: black !important;
+    text-align: left;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add border-radius for a smooth look */
+.accordion-item {
+    /* border-radius: 5px; */
+    overflow: hidden;
+}
+
+/* Ensure smooth collapse/expand */
+.accordion-collapse {
+    transition: height 0.4s ease-out;
+}
+
+/* When active, change background color */
+.accordion-button:not(.collapsed) {
+    background-color: #FFD700 !important;
+    color: black !important;
+    box-shadow: none;
+}
+
+/* Ensure proper visibility of accordion content */
+.accordion-body {
+    height: 100px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    padding: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .accordion-button {
+        font-size: 16px;
+    }
+
+    .accordion-body {
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* Icon Styling */
+.icon-container {
+    background-color: #FFD700; /* Primary color */
+    color: #000; /* White icon */
+    margin-top: 200px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px; /* Centering */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out;
+}
+.icon-container i {
+    font-size: 24px;
+}
+
+.icon-container:hover {
+    transform: scale(1.1); /* Slight pop effect on hover */
+}
+
+
+
+ /* Header Styling */
+ .course-header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table thead {
+    background-color: #FFD700;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 15px;
+    border: 1px solid #000;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+
+/* Testimonial Section Styling */
+.testimonial-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+  }
+  
+  .testimonial-name {
+    font-weight: bold;
+    color: #FFD700;
+    margin-top: 10px;
+  }
+  
+ /* Custom Carousel Buttons */
+.custom-carousel-btn {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(247, 249, 252, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .custom-carousel-btn:hover {
+    background-color: rgba(0, 123, 255, 1);
+    transform: scale(1.1);
+  }
+  
+  /* Customizing Bootstrap Icons */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #000;
+    border-radius: 50%;
+    padding: 12px;
+  }
+  
+
+
+  
