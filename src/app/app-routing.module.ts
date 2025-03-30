@@ -16,13 +16,23 @@ import { ItTalentAcquisitionComponent } from './pages/services/techTalent/it-tal
 import { ItStaffingAndRecruitmentComponent } from './pages/services/techTalent/it-staffing-and-recruitment/it-staffing-and-recruitment.component';
 import { TechConsultingComponent } from './pages/services/techConsulting/tech-consulting/tech-consulting.component';
 import { TrainingWebDevelopmentComponent } from './pages/training/training-web-development/training-web-development.component';
+import { MobileAppComponent } from './pages/training/mobile-app/mobile-app.component';
+import { DataAnalyticsComponent } from './pages/training/data-analytics/data-analytics.component';
+import { CyberSecurityComponent } from './pages/training/cyber-security/cyber-security.component';
+import { UIUXComponent } from './pages/training/ui-ux/ui-ux.component';
+import { BookSessionComponent } from './shared/resueableComponents/header/book-session/book-session.component';
+import { QouteFormComponent } from './pages/services/softwareDevelopment/qoute-form/qoute-form.component';
+import { ItHiringInfoComponent } from './pages/services/itHiring/it-hiring-info/it-hiring-info.component';
+import { DashboardComponent } from './core/dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'meeting', component: MeetingComponent},
+  {path: 'services', component: MeetingComponent},
   {path: 'about', component: MeetingDetailsComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'book-a-session', component: BookSessionComponent},
+  {path: 'get-a-quote', component: QouteFormComponent},
 
   // Services Routes
   {path: 'services/web-development', component: WebDevelopmentComponent},
@@ -30,6 +40,7 @@ const routes: Routes = [
   {path: 'services/mobile-app', component: MobileAppDevelopmentComponent},
 
   // IT HIRING
+  {path: 'IT-hiring', component: ItHiringInfoComponent},
   {path: 'services/angular-developer', component: AngularDevComponent},
   {path: 'services/react-developer', component: ReatJSDevComponent},
   {path: 'services/python-developer', component: PythonDevComponent},
@@ -38,12 +49,16 @@ const routes: Routes = [
 
   {path: 'services/it-talent-acquisition', component: ItTalentAcquisitionComponent},
   {path: 'services/it-staffing-recruitment', component: ItStaffingAndRecruitmentComponent},
+  {path: 'services/tech-consulting', component: TechConsultingComponent},
 
 
   // Training
   {path: 'training/web-development', component: TrainingWebDevelopmentComponent},
-  
-  {path: 'services/tech-consulting', component: TechConsultingComponent}
+  {path: 'training/mobile-app', component: MobileAppComponent},
+  {path: 'training/data-analysis', component: DataAnalyticsComponent},
+  {path: 'training/cyber-security', component: CyberSecurityComponent},
+  {path: 'training/ui-ux', component: UIUXComponent},
+  {path: 'DC', component: DashboardComponent}
 ];
 
 @NgModule({

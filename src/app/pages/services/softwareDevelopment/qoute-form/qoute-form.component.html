@@ -1,0 +1,167 @@
+<section class="heading-page header-text" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h6
+          style="
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+              'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          "
+        >
+          Get Quote
+        </h6>
+        <!-- <h2>Empowering Innovation Through Technology and Training</h2> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="meetings-page" id="meetings">
+  <div class="container">
+    <div class="get-quote py-5" id="quote-form">
+      <div class="container">
+        <h2
+          class="text-center text-light fw-bold mb-4"
+          style="color: #ffd700 !important"
+        >
+          Get a Quote
+        </h2>
+
+        <!-- Success Popup -->
+        <div class="popup-message" *ngIf="showPopup">
+          <p>{{ successMessage }}</p>
+        </div>
+
+        <form
+        [formGroup]="quoteForm"
+        (ngSubmit)="onSubmit()"
+        class="p-4 rounded shadow-sm"
+        style="border: 2px solid #ffd700"
+      >
+        <div class="row g-3">
+          <!-- Full Name -->
+          <div class="col-md-6">
+            <label for="name" class="form-label text-light">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              placeholder="Your Full Name"
+              class="form-control"
+            />
+            <small
+              class="text-danger"
+              *ngIf="quoteForm.get('name')?.invalid && quoteForm.get('name')?.touched"
+              >Name is required</small
+            >
+          </div>
+      
+          <!-- Email -->
+          <div class="col-md-6">
+            <label for="email" class="form-label text-light">Email</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              placeholder="Your Email"
+              class="form-control"
+            />
+            <small
+              class="text-danger"
+              *ngIf="quoteForm.get('email')?.invalid && quoteForm.get('email')?.touched"
+            >
+              {{ quoteForm.get('email')?.errors?.['required'] ? 'Email is required' : 'Enter a valid email' }}
+            </small>
+          </div>
+      
+          <!-- Phone -->
+          <div class="col-md-6">
+            <label for="phone" class="form-label text-light">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              formControlName="phone"
+              placeholder="Your Phone Number"
+              class="form-control"
+            />
+            <small
+              class="text-danger"
+              *ngIf="quoteForm.get('phone')?.invalid && quoteForm.get('phone')?.touched"
+            >
+              {{ quoteForm.get('phone')?.errors?.['required'] ? 'Phone number is required' : 'Enter a valid phone number' }}
+            </small>
+          </div>
+      
+          <!-- Service Type -->
+          <div class="col-md-6">
+            <label for="service" class="form-label text-light">Service Type</label>
+            <select id="service" formControlName="service" class="form-select">
+              <option value="" disabled>Select a service</option>
+              <option value="web-development">Web Development</option>
+              <option value="mobile-app">Mobile App Development</option>
+              <option value="ui-ux">UI/UX Design</option>
+              <option value="seo">SEO & Marketing</option>
+            </select>
+            <small
+              class="text-danger"
+              *ngIf="quoteForm.get('service')?.invalid && quoteForm.get('service')?.touched"
+              >Service selection is required</small
+            >
+          </div>
+      
+          <!-- Location -->
+          <div class="col-md-6">
+            <label for="location" class="form-label text-light">Location</label>
+            <input
+              type="text"
+              id="location"
+              formControlName="location"
+              class="form-control"
+              placeholder="Enter your location"
+            />
+          </div>
+      
+          <!-- Preferred Contact Method -->
+          <div class="col-md-6">
+            <label for="contactMethod" class="form-label text-light">Preferred Contact Method</label>
+            <select id="contactMethod" formControlName="contactMethod" class="form-select">
+              <option value="" disabled>Select contact method</option>
+              <option value="phone">Phone</option>
+              <option value="whatsapp">WhatsApp</option>
+            </select>
+          </div>
+        </div>
+      
+        <!-- Project Details -->
+        <div class="mb-3">
+          <label for="message" class="form-label text-light">Project Details</label>
+          <textarea
+            id="message"
+            formControlName="message"
+            rows="5"
+            placeholder="Describe your project in detail"
+            class="form-control"
+          ></textarea>
+          <small
+            class="text-danger"
+            *ngIf="quoteForm.get('message')?.invalid && quoteForm.get('message')?.touched"
+            >Project details are required</small
+          >
+        </div>
+      
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="btn w-20"
+          style="background-color: #ffd700 !important; border-radius: 30px"
+          [disabled]="quoteForm.invalid"
+        >
+          Request Quote
+        </button>
+      </form>
+      
+      </div>
+    </div>
+  </div>
+</section>

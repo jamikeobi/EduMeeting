@@ -22,6 +22,20 @@ import { ItTalentAcquisitionComponent } from './pages/services/techTalent/it-tal
 import { ItStaffingAndRecruitmentComponent } from './pages/services/techTalent/it-staffing-and-recruitment/it-staffing-and-recruitment.component';
 import { TechConsultingComponent } from './pages/services/techConsulting/tech-consulting/tech-consulting.component';
 import { TrainingWebDevelopmentComponent } from './pages/training/training-web-development/training-web-development.component';
+import { FormComponent } from './pages/services/itHiring/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MobileAppComponent } from './pages/training/mobile-app/mobile-app.component';
+import { CyberSecurityComponent } from './pages/training/cyber-security/cyber-security.component';
+import { DataAnalyticsComponent } from './pages/training/data-analytics/data-analytics.component';
+import { UIUXComponent } from './pages/training/ui-ux/ui-ux.component';
+import { TrainingFormComponent } from './pages/training/training-form/training-form.component';
+import { BookSessionComponent } from './shared/resueableComponents/header/book-session/book-session.component';
+import { QouteFormComponent } from './pages/services/softwareDevelopment/qoute-form/qoute-form.component';
+import { ItHiringInfoComponent } from './pages/services/itHiring/it-hiring-info/it-hiring-info.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TalentFormComponent } from './pages/services/techTalent/talent-form/talent-form.component';
+import { DashboardComponent } from './core/dashboard/dashboard/dashboard.component';
+
 
 
 @NgModule({
@@ -45,11 +59,24 @@ import { TrainingWebDevelopmentComponent } from './pages/training/training-web-d
     ItTalentAcquisitionComponent,
     ItStaffingAndRecruitmentComponent,
     TechConsultingComponent,
-    TrainingWebDevelopmentComponent
+    TrainingWebDevelopmentComponent,
+    FormComponent,
+    MobileAppComponent,
+    CyberSecurityComponent,
+    DataAnalyticsComponent,
+    UIUXComponent,
+    TrainingFormComponent,
+    BookSessionComponent,
+    QouteFormComponent,
+    ItHiringInfoComponent,
+    TalentFormComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

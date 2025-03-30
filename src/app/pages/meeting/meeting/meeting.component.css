@@ -5,3 +5,83 @@ section#meetings .templatemo-item-col {
   .pagination ul li{
     padding: 5px;
   }
+
+  .meeting-item {
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .thumb img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .thumb img:hover {
+    transform: scale(1.05);
+  }
+  
+  .down-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .down-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .down-content h4 {
+      font-size: 1.1rem;
+    }
+    .down-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .down-content {
+      padding: 10px;
+    }
+    .down-content h4 {
+      font-size: 1rem;
+    }
+    .down-content p {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .thumb img {
+      height: 200px; /* You can adjust */
+    }
+    .down-content h4 {
+      font-size: 0.95rem;
+    }
+    .down-content p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .thumb img {
+      height: 180px;
+    }
+    .down-content {
+      padding: 8px;
+    }
+    .down-content h4 {
+      font-size: 0.9rem;
+    }
+    .down-content p {
+      font-size: 0.75rem;
+    }
+  }
+  

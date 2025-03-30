@@ -38,7 +38,6 @@ export class HomeComponent implements AfterViewInit {
   imageIntervalId!: any; // New interval ID for image slideshow
   displayedDescription: string = ''; // For dynamically showing sliding description
   wordIndex: number = 0;
-
   // Template references
   @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
   @ViewChildren('body') accordionBodies!: QueryList<ElementRef>;

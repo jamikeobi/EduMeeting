@@ -59,7 +59,7 @@
 
 
 .hero {
-background: linear-gradient(135deg, #333, #444), url('https://via.placeholder.com/1920x1080');
+/* background: linear-gradient(135deg, #333, #444), url('../../../../../assets/images/about_background2.jpg'); */
 background-size: cover;
 background-position: center;
 padding: 60px 20px;
@@ -99,7 +99,7 @@ color: #FFD700;
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url('../../../../../assets/images/angularDev.jpeg');
+    url('../../../../../assets/images/about_background2.jpg');
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
@@ -136,11 +136,21 @@ color: #FFD700;
   opacity: 0;
 }
 
+.hero-button a{
+  color: black;
+}
+
+.hero-button a:hover{
+  color: #FFD700;
+}
+
 .hero-button:hover {
   background-color: black;
   color: white;
   transform: scale(1.1);
 }
+
+
 
 /* Keyframes for animations */
 @keyframes slideIn {
@@ -212,17 +222,18 @@ background-color: black;
 border: #FFD700 2px solid;
 }
 h2 {
-  padding: 10px;
-  color: #FFD700;
+padding: 10px;
+color: #FFD700;
 }
 p{
-  padding: 10px;
-  color: white;
- 
+padding: 10px;
+
+color: white;
+
 }
 ul{
-  padding: 10px;
-  padding-bottom: 20px;
+padding: 10px;
+padding-bottom: 20px;
 }
 .section {
 padding: 50px 0;
@@ -235,3 +246,43 @@ font-style: italic;
 margin-top: 40px;
 
 }
+
+
+.meetings-page {
+background-color: #222; /* Dark background for contrast */
+color: white; /* White text for readability */
+padding: 50px 0;
+}
+
+.section-title {
+font-size: 28px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.section-description {
+font-size: 18px;
+line-height: 1.6;
+max-width: 800px;
+margin: 0 auto 20px;
+}
+
+.features-list {
+list-style-type: none;
+padding: 0;
+max-width: 600px;
+margin: 0 auto;
+margin-bottom: 20px;
+}
+
+.features-list li {
+font-size: 18px;
+background-color: rgba(255, 255, 255, 0.1);
+padding: 10px;
+margin-bottom: 8px;
+border-radius: 5px;
+text-align: center;
+}
+
+
+/* Testimonial Section Styling */

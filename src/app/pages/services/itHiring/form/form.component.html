@@ -1,0 +1,96 @@
+<section class="contact-us" id="contact">
+    <div class="section hero-bg animate-on-scroll animate__animated animate__fadeInUp mt-5">
+      <div class="container text-white mt-5">
+        <h2>Get Started with Your Developer Today!</h2>
+
+         <!-- Success Popup Message -->
+      <div class="popup-message" *ngIf="showPopup">
+        <p>{{successMessage}}</p>
+      </div>
+      <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" formControlName="name" class="form-control" id="name" placeholder="Your Name">
+          <small class="text-danger" *ngIf="quoteForm.get('name')?.invalid && quoteForm.get('name')?.touched">
+            Name is required
+          </small>
+        </div>
+      
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Your Email">
+          <small class="text-danger" *ngIf="quoteForm.get('email')?.invalid && quoteForm.get('email')?.touched">
+            {{ quoteForm.get('email')?.errors?.['required'] ? 'Email is required' : 'Enter a valid email' }}
+          </small>
+        </div>
+      
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" formControlName="phone" class="form-control" id="phone" placeholder="Your Phone Number">
+          <small class="text-danger" *ngIf="quoteForm.get('phone')?.invalid && quoteForm.get('phone')?.touched">
+            {{ quoteForm.get('phone')?.errors?.['required'] ? 'Phone number is required' : 'Enter a valid phone number' }}
+          </small>
+        </div>
+      
+        <div class="mb-3">
+          <label for="organization" class="form-label">Organization Name (Optional)</label>
+          <input type="text" formControlName="organization" class="form-control" id="organization" placeholder="Your Organization Name">
+        </div>
+      
+        <div class="mb-3">
+          <label for="projectType" class="form-label">Project Type</label>
+          <select class="form-select" formControlName="projectType" id="projectType">
+            <option value="" disabled selected>Select a project type</option>
+            <option value="webDevelopment">Web Development</option>
+            <option value="mobileApp">Mobile App</option>
+            <option value="softwareDevelopment">Software Development</option>
+            <option value="other">Other</option>
+          </select>
+          <small class="text-danger" *ngIf="quoteForm.get('projectType')?.invalid && quoteForm.get('projectType')?.touched">
+            Project Type is required
+          </small>
+        </div>
+      
+        <div class="mb-3">
+          <label for="developerType" class="form-label">Developer Type</label>
+          <select class="form-select" formControlName="developerType" id="developerType">
+            <option value="" disabled selected>Select a developer type</option>
+            <option value="angular">Angular</option>
+            <option value="react">ReactJS</option>
+            <option value="python">Python</option>
+            <option value="node">Node.js</option>
+            <option value="laravel">Laravel</option>
+          </select>
+          <small class="text-danger" *ngIf="quoteForm.get('developerType')?.invalid && quoteForm.get('developerType')?.touched">
+            Developer Type is required
+          </small>
+        </div>
+      
+        <div class="mb-3">
+          <label for="projectDuration" class="form-label">Project Duration</label>
+          <select class="form-select" formControlName="projectDuration" id="projectDuration">
+            <option value="" disabled selected>Select project duration</option>
+            <option value="shortTerm">Short-Term</option>
+            <option value="longTerm">Long-Term</option>
+            <option value="ongoing">Ongoing</option>
+          </select>
+          <small class="text-danger" *ngIf="quoteForm.get('projectDuration')?.invalid && quoteForm.get('projectDuration')?.touched">
+            Project Duration is required
+          </small>
+        </div>
+      
+        <div class="mb-3">
+          <label for="message" class="form-label">Message/Description</label>
+          <textarea formControlName="message" class="form-control" id="message" rows="4" placeholder="Enter a text"></textarea>
+          <small class="text-danger" *ngIf="quoteForm.get('message')?.invalid && quoteForm.get('message')?.touched">
+            {{ quoteForm.get('message')?.errors?.['required'] ? 'Message is required' : 'Enter at least 10 characters' }}
+          </small>
+        </div>
+      
+        <button class="btn btn-gold" type="submit" [disabled]="quoteForm.invalid">Submit</button>
+      </form>
+      
+      </div>
+    </div>
+  </section>
+  

@@ -3,6 +3,20 @@
     border-radius: 8px;
 }
 
+.meeting-item .thumb{
+  width: 100%;
+}
+
+.down-content{
+  background-color: black;
+  height: 100px;
+  transition: 0.5s all ease-in-out;
+}
+.down-content h4{
+  color: white;
+}
+
+
 /* Ensure accordion button follows Bootstrap styling */
 .accordion-button {
     padding: 12px;
@@ -157,7 +171,7 @@
   }
   
   .custom-carousel-btn:hover {
-    background-color: rgba(0, 123, 255, 1);
+    background-color: #FFD700;
     transform: scale(1.1);
   }
   
@@ -171,4 +185,41 @@
   
 
 
+  
+.meetings-page {
+    background-color: #222; /* Dark background for contrast */
+    color: white; /* White text for readability */
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .section-description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  
+  .features-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .features-list li {
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
   

@@ -1,26 +1,26 @@
-  <!-- ***** Main Banner Area Start ***** -->
-  <section class="section main-banner" id="top" data-section="section1">
-    <div class="image-container">
-      <img
-        *ngIf="currentIndex === 0"
-        src="../../../../assets/images/IMG-20250120-WA0026.jpg"
-        class="anim-slide-top"
-        alt="Innovators"
-      />
+<!-- ***** Main Banner Area Start ***** -->
+<section class="section main-banner" id="top" data-section="section1">
+  <div class="image-container">
+    <img
+      *ngIf="currentIndex === 0"
+      src="../../../../assets/images/IMG-20250120-WA0026.jpg"
+      class="anim-slide-top"
+      alt="Innovators"
+    />
 
-      <img
-        *ngIf="currentIndex === 1"
-        src="../../../../assets/images/IMG-20250120-WA0027.jpg"
-        class="anim-slide-top"
-        alt="Visionaries"
-      />
-      <img
-        *ngIf="currentIndex === 2"
-        src="../../../../assets/images/IMG-20250120-WA0028.jpg"
-        class="anim-slide-top"
-        alt="Creators"
-      />
-      <img
+    <img
+      *ngIf="currentIndex === 1"
+      src="../../../../assets/images/IMG-20250120-WA0027.jpg"
+      class="anim-slide-top"
+      alt="Visionaries"
+    />
+    <img
+      *ngIf="currentIndex === 2"
+      src="../../../../assets/images/IMG-20250120-WA0028.jpg"
+      class="anim-slide-top"
+      alt="Creators"
+    />
+    <img
       *ngIf="currentIndex === 3"
       src="../../../../assets/images/IMG-20250120-WA0030.jpg"
       class="anim-slide-top"
@@ -39,132 +39,159 @@
       class="anim-slide-top"
       alt="Creators"
     />
+  </div>
 
-    </div>
+  <div class="video-overlay header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="caption">
+            <!-- Slide from Left -->
+            <h6 class="anim-slide-left">{{ currentHeading }}</h6>
 
-    <div class="video-overlay header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="caption">
-              <!-- Slide from Left -->
-              <h6 class="anim-slide-left">{{ currentHeading }}</h6>
+            <!-- Slide from Right -->
+            <h2 class="anim-slide-right">Welcome to Morrhtech Solutions</h2>
 
-              <!-- Slide from Right -->
-              <h2 class="anim-slide-right">
-                Welcome to Morrhtech Solutions
-              </h2>
+            <!-- Slide from Top -->
+            <p [innerHTML]="displayedDescription" class="anim-slide-top"></p>
+            <br />
 
-              <!-- Slide from Top -->
-              <p [innerHTML]="displayedDescription" class="anim-slide-top"></p>
-              <br />
-
-              <!-- Slide from Bottom -->
-              <div class="main-button-red anim-slide-bottom mb-5">
-                <div class="scroll-to-section">
-                  <a href="/services">Get started</a>
-                </div>
+            <!-- Slide from Bottom -->
+            <div class="main-button-red anim-slide-bottom mb-5">
+              <div class="scroll-to-section">
+                <a href="/contact">Get started</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-<!-- ***** Main Banner Area End ***** -->
-<section class="services" >
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="owl-service-item owl-carousel">
-
-          <!-- Custom Web Development -->
-          <div class="item">
-            <div class="icon">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <div class="down-content">
-              <h4 class="taglineintro animfadeIn" data-time="2200">Custom Web Development</h4>
-              <p class="height">Build a dynamic online presence with our expertly crafted websites tailored to your business needs.</p>
-              <div class="main-button-red">
-                <div class="scroll-to-section">
-              <a href="#custom-web-development" class="cta-button">Learn More</a>
-            </div>
-          </div>
-            </div>
-          </div>
-
-          <!-- Mobile App Development -->
-          <div class="item">
-            <div class="icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <div class="down-content">
-              <h4>Mobile App Development</h4>
-              <p class="height">Deliver seamless experiences with custom mobile apps designed for Android and iOS platforms.</p>
-              <div class="main-button-red">
-                <div class="scroll-to-section">
-              <a href="#mobile-app-development" class="cta-button">Explore Services</a>
-            </div>
-          </div>
-            </div>
-          </div>
-
-          <!-- IT Staffing & Recruitment -->
-          <div class="item">
-            <div class="icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <div class="down-content">
-              <h4>IT Staffing & Recruitment</h4>
-              <p class="height">Find the right talent for your IT needs with our specialized recruitment and staffing solutions.</p>
-              <div class="main-button-red">
-                <div class="scroll-to-section">
-              <a href="#it-staffing" class="cta-button">Hire Talent</a>
-            </div>
-          </div>
-            </div>
-          </div>
-
-          <!-- IT Consulting & Strategy -->
-          <div class="item">
-            <div class="icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <div class="down-content">
-              <h4>IT Consulting & Strategy</h4>
-              <p class="height">Drive innovation and efficiency with our expert IT consulting services tailored to your goals.</p>
-              <div class="main-button-red">
-                <div class="scroll-to-section">
-              <a href="#it-consulting" class="cta-button">Get Started</a>
-            </div>
-          </div>
-            </div>
-          </div>
-
-          <!-- Training & Upskilling -->
-          <div class="item">
-            <div class="icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="down-content">
-              <h4>Training & Upskilling</h4>
-              <p class="height">Empower yourself or your team with hands-on training in web development, cybersecurity, data analysis, and more.</p>
-              <div class="main-button-red">
-                <div class="scroll-to-section">
-              <a href="#training-upskilling" class="cta-button">View Courses</a>
-            </div>
-          </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
+<!-- Services Section -->
+<section class="services py-5">
+  <div class="container">
+    <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Custom Web Development -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <div class="card service-card">
+              <div class="icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h4>Custom Web Development</h4>
+              <p>
+                Build a dynamic online presence with our expertly crafted
+                websites tailored to your business needs.
+              </p>
+              <a href="/services/web-development" class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile App Development -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="card service-card">
+              <div class="icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h4>Mobile App Development</h4>
+              <p>
+                Deliver seamless experiences with custom mobile apps designed
+                for Android and iOS platforms.
+              </p>
+              <a href="/services/mobile-app" class="btn btn-primary"
+                >Explore Services</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- IT Staffing & Recruitment -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="card service-card">
+              <div class="icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4>IT Staffing & Recruitment</h4>
+              <p>
+                Find the right talent for your IT needs with our specialized
+                recruitment and staffing solutions.
+              </p>
+              <a
+                href="/services/it-staffing-recruitment"
+                class="btn btn-primary"
+                >Hire Talent</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- IT Consulting & Strategy -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="card service-card">
+              <div class="icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h4>IT Consulting & Strategy</h4>
+              <p>
+                Drive innovation and efficiency with our expert IT consulting
+                services tailored to your goals.
+              </p>
+              <a href="/services/tech-consulting" class="btn btn-primary"
+                >Get Started</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Training & Upskilling -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="card service-card">
+              <div class="icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <h4>Training & Upskilling</h4>
+              <p>
+                Empower yourself or your team with hands-on training in web
+                development, cybersecurity, data analysis, and more.
+              </p>
+              <a href="/training/cyber-security" class="btn btn-primary"
+                >View Courses</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#servicesCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#servicesCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
 
 <section class="upcoming-meetings" id="meetings">
   <div class="container">
@@ -176,16 +203,24 @@
       </div>
       <div class="col-lg-4">
         <div class="categories">
-          <h4>Services Catgories</h4>
+          <h4>Services Categories</h4>
           <ul>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Mobile App Development</a></li>
-            <li><a href="#">IT Consulting</a></li>
-            <li><a href="#">IT Staffing & Recruitment</a></li>
-            <li><a href="#">Training & Upskilling</a></li>
+            <li><a href="/services/web-development">Web Development</a></li>
+            <br />
+            <li><a href="/services/mobile-app">Mobile App Development</a></li>
+            <br />
+            <li><a href="/services/tech-consulting">IT Consulting</a></li>
+            <br />
+            <li>
+              <a href="/services/it-staffing-recruitment"
+                >IT Staffing & Recruitment</a
+              >
+            </li>
+            <br />
+            <li><a href="/">Training & Upskilling</a></li>
           </ul>
           <div class="main-button-red">
-            <a href="/meeting">Explore All Our Services</a>
+            <a href="/services">Explore All Our Services</a>
           </div>
         </div>
       </div>
@@ -197,15 +232,27 @@
                 <!-- <div class="price">
                   <span>$22.00</span>
                 </div> -->
-                <a href="/meeting-detail"><img src="../../../../assets/images/webDevelopment.jpg" alt="New Lecturer Meeting"></a>
+                <a href="/services/web-development"
+                  ><img
+                    src="../../../../assets/images/webDevelopment.jpg"
+                    alt="New Lecturer Meeting"
+                /></a>
               </div>
               <div class="down-content">
                 <!-- <div class="date">
                   <h6>Nov <span>10</span></h6>
                 </div> -->
-                <a href="/meeting-detail"><h4>Web Development Workshop</h4></a>
-                <p>Build dynamic websites and web applications with hands-on training.</p>
-                <p>Master the latest web technologies with our expert instructors.</p>
+                <a href="/services/web-development"
+                  ><h4>Web Development Workshop</h4></a
+                >
+                <p>
+                  Build dynamic websites and web applications with hands-on
+                  training.
+                </p>
+                <p>
+                  Master the latest web technologies with our expert
+                  instructors.
+                </p>
               </div>
             </div>
           </div>
@@ -215,15 +262,26 @@
                 <!-- <div class="price">
                   <span>$36.00</span>
                 </div> -->
-                <a href="/meeting-detail"><img src="../../../../assets/images/mobileApp.jpg" alt="Online Teaching"></a>
+                <a href="/services/mobile-app"
+                  ><img
+                    src="../../../../assets/images/mobileApp.jpg"
+                    alt="Online Teaching"
+                /></a>
               </div>
               <div class="down-content">
                 <!-- <div class="date">
                   <h6>Nov <span>24</span></h6>
                 </div> -->
-                <a href="/meeting-detail"><h4>Mobile App Development Training</h4></a>
-                <p>Learn how to develop custom mobile apps for both Android and iOS platforms.</p>
-                <p>Hands-on learning with real-world app development projects.                </p>
+                <a href="/services/mobile-app"
+                  ><h4>Mobile App Development Training</h4></a
+                >
+                <p>
+                  Learn how to develop custom mobile apps for both Android and
+                  iOS platforms.
+                </p>
+                <p>
+                  Hands-on learning with real-world app development projects.
+                </p>
               </div>
             </div>
           </div>
@@ -233,15 +291,27 @@
                 <!-- <div class="price">
                   <span>$14.00</span>
                 </div> -->
-                <a href="/meeting-details"><img src="../../../../assets/images/cyberSecurity.jpg" alt="Higher Education"></a>
+                <a href="training/cyber-security"
+                  ><img
+                    src="../../../../assets/images/cyberSecurity.jpg"
+                    alt="Cyber Security Image"
+                /></a>
               </div>
               <div class="down-content">
                 <!-- <div class="date">
                   <h6>Nov <span>26</span></h6>
                 </div> -->
-                <a href="/meeting-detail"><h4>Cybersecurity Essentials                </h4></a>
-                <p>Understand the basics of protecting networks, applications, and data.</p>
-                <p>Gain practical knowledge of the latest cybersecurity tools and threats.</p>
+                <a href="/training/cyber-security"
+                  ><h4>Cybersecurity Essentials</h4></a
+                >
+                <p>
+                  Understand the basics of protecting networks, applications,
+                  and data.
+                </p>
+                <p>
+                  Gain practical knowledge of the latest cybersecurity tools and
+                  threats.
+                </p>
               </div>
             </div>
           </div>
@@ -251,14 +321,23 @@
                 <!-- <div class="price">
                   <span>$48.00</span>
                 </div> -->
-                <a href="/meeting-detail"><img src="../../../../assets/images/Dash_Tail UI Concept.jpg" alt="Student Training"></a>
+                <a href="/training/data-analysis"
+                  ><img
+                    src="../../../../assets/images/Dash_Tail UI Concept.jpg"
+                    alt="Image on Data Analysis"
+                /></a>
               </div>
               <div class="down-content">
                 <!-- <div class="date">
                   <h6>Nov <span>30</span></h6>
                 </div> -->
-                <a href="/meeting-detail"><h4>Data Analysis with Machine Learning</h4></a>
-                <p>Unlock the power of data with hands-on experience in analysis and machine learning.</p>
+                <a href="/training/data-analysis"
+                  ><h4>Data Analysis with Machine Learning</h4></a
+                >
+                <p>
+                  Unlock the power of data with hands-on experience in analysis
+                  and machine learning.
+                </p>
                 <p>Learn how to analyze data and create predictive models.</p>
               </div>
             </div>
@@ -275,21 +354,49 @@
       <div class="col-lg-6 align-self-center">
         <div class="row">
           <div class="col-lg-12">
-            <div class="item" style="background-color: black; border: 2px solid #FFD700; border-radius: 7px;">
-              <h3>Join Our Web Development Bootcamp </h3>
-              <p>Kickstart your journey in web development with our comprehensive bootcamp. Learn HTML, CSS, JavaScript, and frameworks like Angular, all in one place. Get hands-on experience with real-world projects.</p>
+            <div
+              class="item"
+              style="
+                background-color: black;
+                border: 2px solid #ffd700;
+                border-radius: 7px;
+              "
+            >
+              <h3>Join Our Web Development Bootcamp</h3>
+              <p>
+                Kickstart your journey in web development with our comprehensive
+                bootcamp. Learn HTML, CSS, JavaScript, and frameworks like
+                Angular, all in one place. Get hands-on experience with
+                real-world projects.
+              </p>
               <div class="main-button-red">
-                <div class="scroll-to-section"><a href="#contact">Enroll Now!</a></div>
-            </div>
+                <div class="scroll-to-section">
+                  <a href="/contact">Enroll Now!</a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-12">
-            <div class="item" style="background-color: black; border: 2px solid #FFD700; border-radius: 5px;">
+            <div
+              class="item"
+              style="
+                background-color: black;
+                border: 2px solid #ffd700;
+                border-radius: 5px;
+              "
+            >
               <h3>Upskill in Cybersecurity</h3>
-              <p>Enhance your skills in cybersecurity by learning how to protect networks, applications, and data from modern threats. Our expert-led training equips you to secure your digital environment.</p>
+              <p>
+                Enhance your skills in cybersecurity by learning how to protect
+                networks, applications, and data from modern threats. Our
+                expert-led training equips you to secure your digital
+                environment.
+              </p>
               <div class="main-button-yellow">
-                <div class="scroll-to-section"><a href="#contact">Get Started!</a></div>
-            </div>
+                <div class="scroll-to-section">
+                  <a href="/contact">Get Started!</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -297,7 +404,10 @@
 
       <div class="col-lg-6">
         <div class="accordions">
-          <article class="accordion" *ngFor="let accordion of accordions; let i = index">
+          <article
+            class="accordion"
+            *ngFor="let accordion of accordions; let i = index"
+          >
             <div
               class="accordion-head"
               [class.open]="activeIndex === i"
@@ -314,7 +424,11 @@
                 ></i>
               </span>
             </div>
-            <div class="accordion-body" #body [class.active]="activeIndex === i">
+            <div
+              class="accordion-body"
+              #body
+              [class.active]="activeIndex === i"
+            >
               <div class="content">
                 <p>{{ accordion.content }}</p>
               </div>
@@ -322,13 +436,11 @@
           </article>
         </div>
       </div>
-
-
     </div>
   </div>
 </section>
 
-<section class="our-courses" id="courses">
+<!-- <section class="our-courses" id="courses">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -336,112 +448,189 @@
           <h2>Explore Our Training Programs</h2>
         </div>
       </div>
-      <div class="col-lg-12" >
+      <div class="col-lg-12">
         <div class="owl-courses-item owl-carousel">
-          <div class="item"  >
-            <img src="../../../../assets/images/webDevelopment.jpg" alt="Course One">
-            <div class="down-content"  >
+          <div class="item">
+            <img
+              src="../../../../assets/images/webDevelopment.jpg"
+              alt="Image on Web Development"
+            />
+            <div class="down-content" id="down-content">
               <h4>Web Development</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Learn to build responsive and dynamic websites using HTML, CSS, JavaScript, and Angular.</p>
+              <p style=" justify-content: center; padding: 20px">
+                Learn to build responsive and dynamic websites using HTML, CSS,
+                JavaScript, and Angular.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/full-stack.jpg" alt="Course Two">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/full-stack.jpg"
+              alt="Image on Full Stack Development"
+            />
+            <div class="down-content" id="down-content">
               <h4>Full-Stack Development</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Master both frontend and backend technologies for a complete web development experience.</p>
+              <p style="justify-content: center; padding: 20px">
+                Master both frontend and backend technologies for a complete web
+                development experience.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/app-dev.jpg" alt="Course Three">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/app-dev.jpg"
+              alt="Image on Mobile App Development"
+            />
+            <div class="down-content" id="down-content">
               <h4>Mobile App Development</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Create innovative apps for Android and iOS using React Native.</p>
+              <p style="justify-content: center; padding: 20px">
+                Create innovative apps for Android and iOS using React Native.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/cyberSEC.jpg" alt="Course Four">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/cyberSEC.jpg"
+              alt="Course Four"
+            />
+            <div class="down-content" id="down-content">
               <h4>Cybersecurity Training</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Protect networks, systems, and data with essential cybersecurity skills.</p>
+              <p style="justify-content: center; padding: 20px">
+                Protect networks, systems, and data with essential cybersecurity
+                skills.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/ui ux design.jpg" alt="Course Five">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/ui ux design.jpg"
+              alt="Course Five"
+            />
+            <div class="down-content" id="down-content">
               <h4>UI/UX Design</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Design user-friendly and visually appealing interfaces for websites and apps.</p>
+              <p style="justify-content: center; padding: 20px">
+                Design user-friendly and visually appealing interfaces for
+                websites and apps.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/data analysis.jpeg" alt="Course Six">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/data analysis.jpeg"
+              alt="Course Six"
+            />
+            <div class="down-content" id="down-content">
               <h4>Data Analysis with Machine Learning</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Gain insights from data and build predictive models with machine learning tools.</p>
+              <p style="justify-content: center; padding: 20px">
+                Gain insights from data and build predictive models with machine
+                learning tools.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/cloud.jpeg" alt="Course Seven">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/cloud.jpeg"
+              alt="Course Seven"
+            />
+            <div class="down-content" id="down-content">
               <h4>Cloud Engineering</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Learn cloud technologies and deployment strategies for modern applications.</p>
+              <p style="justify-content: center; padding: 20px">
+                Learn cloud technologies and deployment strategies for modern
+                applications.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/IT consulting.webp" alt="Course Eight">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/IT consulting.webp"
+              alt="Course Eight"
+            />
+            <div class="down-content" id="down-content">
               <h4>IT Consulting</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Understand how to analyze and solve IT challenges for businesses.</p>
+              <p style="justify-content: center; padding: 20px">
+                Understand how to analyze and solve IT challenges for
+                businesses.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/it staff.webp" alt="Course Nine">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/it staff.webp"
+              alt="Course Nine"
+            />
+            <div class="down-content" id="down-content">
               <h4>IT Staffing & Recruitment</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Gain knowledge of how to match IT talent with the right projects.</p>
+              <p style="justify-content: center; padding: 20px">
+                Gain knowledge of how to match IT talent with the right
+                projects.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/custom.webp" alt="Course Ten">
+            <img src="../../../../assets/images/custom.webp" alt="Course Ten" />
             <div class="down-content">
               <h4>Custom Software Development</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Learn the essentials of developing software tailored to business needs.</p>
+              <p style="justify-content: center; padding: 20px">
+                Learn the essentials of developing software tailored to business
+                needs.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/backend2.jpg" alt="Course Eleven">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/backend2.jpg"
+              alt="Course Eleven"
+            />
+            <div class="down-content" id="down-content">
               <h4>Backend Development</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Dive deep into server-side programming with Node.js or Laravel.</p>
+              <p style="justify-content: center; padding: 20px">
+                Dive deep into server-side programming with Node.js or Laravel.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/front-end.jpg" alt="Course Twelve">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/front-end.jpg"
+              alt="Course Twelve"
+            />
+            <div class="down-content" id="down-content">
               <h4>Frontend Development</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Focus on building beautiful and functional user interfaces.</p>
+              <p style="justify-content: center; padding: 20px">
+                Focus on building beautiful and functional user interfaces.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/vun.webp" alt="Course Thirteen">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/vun.webp"
+              alt="Course Thirteen"
+            />
+            <div class="down-content" id="down-content">
               <h4>Vulnerability Management</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Learn to identify, assess, and mitigate security vulnerabilities.</p>
+              <p style="justify-content: center; padding: 20px">
+                Learn to identify, assess, and mitigate security
+                vulnerabilities.
+              </p>
             </div>
           </div>
           <div class="item">
-            <img src="../../../../assets/images/web.3.jpg" alt="Course Fourteen">
-            <div class="down-content">
+            <img
+              src="../../../../assets/images/web.3.jpg"
+              alt="Course Fourteen"
+            />
+            <div class="down-content" id="down-content">
               <h4>Web3 Development</h4>
-              <p style="width: 350px; justify-content: center; padding: 20px;">Explore the future of decentralized applications and blockchain technology.</p>
+              <p style="justify-content: center; padding: 20px">
+                Explore the future of decentralized applications and blockchain
+                technology.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-
+</section> -->
 
 <section class="our-facts">
   <div class="container">
@@ -475,7 +664,9 @@
                 <div class="count-area-content new-students">
                   <div class="count-digit">5079</div>
                   <div class="count-title">Students Trained</div>
-                  <p>Aspiring tech professionals empowered through our programs.</p>
+                  <p>
+                    Aspiring tech professionals empowered through our programs.
+                  </p>
                 </div>
               </div>
               <div class="col-12">
@@ -491,8 +682,11 @@
       </div>
       <div class="col-lg-6 align-self-center">
         <div class="video">
-          <video #bgVideo class="video-content"  controls>
-            <source src="../../../../assets/images/morrhtechVideo2.mp4" type="video/mp4"  />
+          <video #bgVideo class="video-content" controls>
+            <source
+              src="../../../../assets/images/morrhtechVideo2.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -500,5 +694,3 @@
     </div>
   </div>
 </section>
-
-

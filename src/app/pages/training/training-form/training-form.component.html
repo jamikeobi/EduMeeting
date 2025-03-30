@@ -1,0 +1,103 @@
+<div class="contact-us py-5" id="form">
+    <div class="container">
+      <h2
+        class="text-center text-light fw-bold mb-4"
+        style="color: #ffd700 !important"
+      >
+        Start Your Tech Journey Today!
+      </h2>
+      <!-- Success Message -->
+      <div class="popup-message" *ngIf="showPopup">
+        <p>{{ successMessage }}</p>
+      </div>
+  
+      <form [formGroup]="enrollForm" (ngSubmit)="onSubmit()" class="p-4 rounded shadow-sm" style="border: 2px solid #ffd700">
+        <div class="row g-3">
+          <!-- Full Name -->
+          <div class="col-md-6">
+            <label for="name" class="form-label text-light">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              placeholder="Your Full Name"
+              class="form-control"
+            />
+            <small class="text-danger" *ngIf="enrollForm.get('name')?.invalid && enrollForm.get('name')?.touched">
+              Name is required
+            </small>
+          </div>
+      
+          <!-- Email -->
+          <div class="col-md-6">
+            <label for="email" class="form-label text-light">Email</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              placeholder="Your Email"
+              class="form-control"
+            />
+            <small class="text-danger" *ngIf="enrollForm.get('email')?.invalid && enrollForm.get('email')?.touched">
+              {{ enrollForm.get('email')?.errors?.['required'] ? 'Email is required' : 'Enter a valid email' }}
+            </small>
+          </div>
+      
+          <!-- Phone -->
+          <div class="col-md-6">
+            <label for="phone" class="form-label text-light">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              formControlName="phone"
+              placeholder="Your Phone Number"
+              class="form-control"
+            />
+            <small class="text-danger" *ngIf="enrollForm.get('phone')?.invalid && enrollForm.get('phone')?.touched">
+              {{ enrollForm.get('phone')?.errors?.['required'] ? 'Phone number is required' : 'Enter a valid phone number' }}
+            </small>
+          </div>
+      
+          <!-- Course Selection -->
+          <div class="col-md-6">
+            <label for="job-role" class="form-label text-light">Course Selection</label>
+            <select id="job-role" formControlName="jobRole" class="form-select">
+              <option value="" disabled>Select a course</option>
+              <option value="web-development">Web Development</option>
+              <option value="mobile-app">Mobile App Development</option>
+              <option value="cyber-security">Cyber Security</option>
+              <option value="data-analysis">Data Analysis</option>
+              <option value="ui-ux">UI/UX</option>
+            </select>
+            <small class="text-danger" *ngIf="enrollForm.get('jobRole')?.invalid && enrollForm.get('jobRole')?.touched">
+              Course selection is required
+            </small>
+          </div>
+        </div>
+      
+        <!-- Message -->
+        <div class="mb-3">
+          <label for="additional-details" class="form-label text-light">Message (optional)</label>
+          <textarea
+            id="additional-details"
+            formControlName="message"
+            rows="4"
+            placeholder="Enter a text"
+            class="form-control"
+          ></textarea>
+        </div>
+      
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="btn w-20"
+          style="background-color: #ffd700 !important; border-radius: 30px"
+          [disabled]="enrollForm.invalid"
+        >
+          Enroll Now
+        </button>
+      </form>
+      
+    </div>
+  </div>
+  

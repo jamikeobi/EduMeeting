@@ -1,3 +1,52 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align logo to the left */
+  padding: 10px;
+}
+
+.logo img {
+  width: 120px; /* Increased size for better visibility */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.logo img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  opacity: 0.9; /* Slight dim for a smooth effect */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 100px;
+    max-height: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    justify-content: center; /* Center logo on smaller screens */
+  }
+
+  .logo img {
+    width: 80px;
+    max-height: 60px;
+  }
+}
+
+
+
+
+.header-area{
+  top: 50px; /* Ensures it starts just below the slider */
+  left: 0;
+  z-index: 999;
+}
+
+
 .header-area .btn {
   background-color: #FFD700;
   color: #000;
@@ -21,20 +70,42 @@
   display: flex;
   flex-direction: column;
 }
-
 .menu-trigger {
+  border: 2px solid #FFD700; /* Gold border */
+  background: linear-gradient(145deg, #1a1a1a, #111); /* Dark gradient */
+  padding: 12px 20px;
+  border-radius: 8px;
   display: none;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.2), 
+              0 2px 4px rgba(255, 215, 0, 0.3);
+}
+
+.menu-trigger:hover {
+color: #000;
+background-color: #FFD700;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5);
 }
 
 .menu-trigger span {
   color: #FFD700;
   font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-trigger.active {
+  background: #FFD700;
+  border-color: #FFF;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .menu-trigger.active span {
-  color: #FFF;
+  color: #111;
 }
+
 
 @media (max-width: 768px) {
   .search-bar {
@@ -222,7 +293,7 @@
 {
   background-color: white;
   overflow: auto;
-  height: 800px;
+  height: 100%;
   width: 300px;
   padding: 10px;
   justify-content: left;

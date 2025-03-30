@@ -1,66 +1,180 @@
+<section class="heading-page header-text" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h6
+          style="
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+              'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          "
+        >
+          Contact Us
+        </h6>
+        <!-- <h2>Empowering Innovation Through Technology and Training</h2> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 <section class="contact-us" id="contact">
+  
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Our Location</h2>
+    <div class="map-container">
+      <!-- Replace src with your map embed URL -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3587.6430178970895!2d3.2673662!3d6.4613985!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b88962cbdf739%3A0xa346116433d8f2fa!2sEMPIRE%20AUTO%20SPARE%20PARTS!5e1!3m2!1sen!2sng!4v1742307003414!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
   <div class="container">
     <div class="row">
       <div class="col-lg-9 align-self-center">
         <div class="row">
           <div class="col-lg-12">
-            <form id="contact" action="#" method="post">
-              <div class="row">
-                <div class="col-lg-12">
-                  <h2>Let's get in touch</h2>
+
+            <div class="col">
+              <p *ngIf="showMessage" class="popup-message">{{ message }}</p>
+            </div>
+            
+            <form
+              [formGroup]="contactForm"
+              (ngSubmit)="onSubmit()"
+              class="p-4 rounded shadow-sm"
+              style="border: 2px solid #ffd700; margin-bottom: 30px"
+            >
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label text-light"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    formControlName="name"
+                    placeholder="Your Full Name"
+                    class="form-control"
+                  />
+                  <div
+                    *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+                    class="text-danger mt-1"
+                  >
+                    Full Name is required
+                  </div>
                 </div>
-                <div class="col-lg-4">
-                  <fieldset>
-                    <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
-                  </fieldset>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label text-light">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    formControlName="email"
+                    placeholder="Your Email"
+                    class="form-control"
+                  />
+                  <div
+                    *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                    class="text-danger mt-1"
+                  >
+                    <span *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                      >Email is required</span
+                    >
+                  </div>
                 </div>
-                <div class="col-lg-4">
-                  <fieldset>
-                  <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
-                </fieldset>
+
+                <div class="col-md-6">
+                  <label for="phone" class="form-label text-light">Phone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    formControlName="phone"
+                    placeholder="Your Phone Number"
+                    class="form-control"
+                  />
+                  <div
+                    *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched"
+                    class="text-danger mt-1"
+                  >
+                    Phone number is required
+                  </div>
                 </div>
-                <div class="col-lg-4">
-                  <fieldset>
-                    <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required="">
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
-                  </fieldset>
+
+                <div class="col-md-6">
+                  <label for="subject" class="form-label text-light"
+                    >Subject (optional)</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    formControlName="subject"
+                    placeholder="Subject"
+                    class="form-control"
+                  />
                 </div>
               </div>
+
+              <div class="mb-3 mt-3">
+                <label for="message" class="form-label text-light"
+                  >Message (optional)</label
+                >
+                <textarea
+                  id="message"
+                  formControlName="message"
+                  rows="4"
+                  placeholder="Enter a text"
+                  class="form-control"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn w-20"
+                style="
+                  background-color: #ffd700 !important;
+                  border-radius: 30px;
+                "
+                [disabled]="contactForm.invalid"
+              >
+                Contact Us
+              </button>
             </form>
           </div>
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3" style="margin-bottom: 30px">
         <div class="right-info">
           <ul>
             <li>
               <h6>Phone Number</h6>
-              <span>010-020-0340</span>
+              <span>
+                <a href="tel:09049283653" style="color: #555; text-decoration: none;">
+                  0904-928-3653
+                </a>
+              </span>
             </li>
             <li>
               <h6>Email Address</h6>
-              <span>info&#64;meeting.edu</span>
+              <span>
+                <a href="mailto:morrhtechsocials@gmail.com" style="color: #555; text-decoration: none;">
+                  morrhtechsocials&#64;gmail.com
+                </a>
+              </span>
             </li>
             <li>
               <h6>Street Address</h6>
-              <span>Rio de Janeiro - RJ, 22795-008, Brazil</span>
-            </li>
-            <li>
-              <h6>Website URL</h6>
-              <span>www.meeting.edu</span>
+              <span>
+                7th avenue, AA close, GCL Plaza beside Total Energies Filling
+                Station Festac town.
+              </span>
             </li>
           </ul>
         </div>
       </div>
+      
     </div>
   </div>
   <!-- <div class="footer">

@@ -1,0 +1,102 @@
+<section class="meetings-page" id="meetings">
+ <!-- Filter Bar -->
+<div class="filter-bar wow fadeInDown" data-wow-duration="1s">
+    <div class=" filter-buttons">
+        <button class="btn btn-primary" (click)="selectFormType('contact')">Contact Form</button>
+        <button class="btn btn-primary" (click)="selectFormType('bookSession')">Book Session</button>
+        <button class="btn btn-primary" (click)="selectFormType('itHiring')">IT Hiring</button>
+        <button class="btn btn-primary" (click)="selectFormType('quote')">Quote</button>
+        <button class="btn btn-primary" (click)="selectFormType('techTalent')">Tech Talent</button>
+        <button class="btn btn-primary" (click)="selectFormType('training')">Training</button>
+    </div>
+</div>
+
+  <div class="container">
+    <h2>{{ selectedFormType | titlecase }} DashBoard</h2>
+    <button class="clear-form-btn" (click)="deleteAllFormData()">
+      Clear All {{ selectedFormType }} Form Data
+    </button>
+
+    <div class="content">
+      <div class="dashboard-item-container">
+        <div
+          style="text-align: center"
+          *ngIf="!formDetailsMap[selectedFormType]?.length"
+        >
+          <h2>No {{ selectedFormType }} Form data has been created yet!!!</h2>
+        </div>
+
+        <div
+          class="task-item card"
+          *ngFor="let form of formDetailsMap[selectedFormType]"
+        >
+          <div class="card-header">
+            <h3>{{ form.fullName || form.name }}</h3>
+            <button
+              class="delete-btn"
+              title="Delete"
+              (click)="toggleConfirmDialog(form.id, selectedFormType)"
+            >
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+          <div class="card-body">
+            <p *ngIf="form.email"><b>Email: </b>{{ form.email }}</p>
+            <p *ngIf="form.phoneNumber || form.phone">
+              <b>Phone: </b>{{ form.phoneNumber || form.phone }}
+            </p>
+            <p *ngIf="form.subject"><b>Subject: </b>{{ form.subject }}</p>
+            <p *ngIf="form.message"><b>Message: </b>{{ form.message }}</p>
+            <p *ngIf="form.course"><b>Course: </b>{{ form.course }}</p>
+            <p *ngIf="form.sessionDate">
+              <b>Session Date: </b>{{ form.sessionDate }}
+            </p>
+            <p *ngIf="form.sessionTime">
+              <b>Session Time: </b>{{ form.sessionTime }}
+            </p>
+            <p *ngIf="form.organizationName">
+              <b>Organization: </b>{{ form.organizationName }}
+            </p>
+            <p *ngIf="form.projectType">
+              <b>Project Type: </b>{{ form.projectType }}
+            </p>
+            <p *ngIf="form.DeveloperType">
+              <b>Developer Type: </b>{{ form.DeveloperType }}
+            </p>
+            <p *ngIf="form.projectDuration">
+              <b>Project Duration: </b>{{ form.projectDuration }}
+            </p>
+            <p *ngIf="form.serviceType">
+              <b>Service Type: </b>{{ form.serviceType }}
+            </p>
+            <p *ngIf="form.location"><b>Location: </b>{{ form.location }}</p>
+            <p *ngIf="form.contactMethod">
+              <b>Contact Method: </b>{{ form.contactMethod }}
+            </p>
+            <p *ngIf="form.projectDetails">
+              <b>Project Details: </b>{{ form.projectDetails }}
+            </p>
+            <p *ngIf="form.jobRole"><b>Job Role: </b>{{ form.jobRole }}</p>
+            <p *ngIf="form.employmentType">
+              <b>Employment Type: </b>{{ form.employmentType }}
+            </p>
+            <p *ngIf="form.date"><b>Date: </b>{{ form.date }}</p>
+            <p><b>Identification Number: </b>{{ form.id }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirmation Dialog -->
+    <div class="confirm-dialog" *ngIf="showConfirmDialog">
+      <div class="confirm-dialog-content">
+        <h2>Confirm Deletion</h2>
+        <p>Are you sure you want to delete this record?</p>
+        <div class="buttons">
+          <button class="confirm-btn" (click)="confirmDelete()">Yes</button>
+          <button class="cancel-btn" (click)="cancelDelete()">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

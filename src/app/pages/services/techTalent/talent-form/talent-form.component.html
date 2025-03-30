@@ -1,0 +1,157 @@
+<!-- Common Form Section -->
+<section class="contact-us py-5">
+  <div class="container">
+    <h2 class="text-center text-light fw-bold mb-4">
+      Let’s Find Your Next IT Star
+    </h2>
+
+    <!-- Success Popup -->
+    <div class="popup-message" *ngIf="showPopup">
+      <p>✅ Your request has been successfully submitted!</p>
+    </div>
+
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="p-4 rounded shadow-sm border-gold"
+      style="border: 2px solid #ffd700"
+    >
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label text-light">Name</label>
+          <input
+            type="text"
+            formControlName="name"
+            id="name"
+            placeholder="YOUR NAME"
+            class="form-control"
+          />
+          <small
+            class="text-danger"
+            *ngIf="form.get('name')?.invalid && form.get('name')?.touched"
+            >Name is required</small
+          >
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label text-light">Email</label>
+          <input
+            type="email"
+            formControlName="email"
+            id="email"
+            placeholder="YOUR EMAIL"
+            class="form-control"
+          />
+          <small
+            class="text-danger"
+            *ngIf="form.get('email')?.invalid && form.get('email')?.touched"
+          >
+            {{ form.get('email')?.errors?.['required'] ? 'Email is required' : 'Enter a valid email' }}
+          </small>
+        </div>
+
+        <div class="col-md-6">
+          <label for="phone" class="form-label text-light">Phone</label>
+          <input
+            type="tel"
+            formControlName="phone"
+            id="phone"
+            placeholder="YOUR PHONE NUMBER"
+            class="form-control"
+          />
+          <small
+            class="text-danger"
+            *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched"
+          >
+            {{ form.get('phone')?.errors?.['required'] ? 'Phone number is required' : 'Enter a valid phone number' }}
+          </small>
+        </div>
+
+        <div class="col-md-6">
+          <label for="organization" class="form-label text-light"
+            >Organization</label
+          >
+          <input
+            type="text"
+            formControlName="organization"
+            id="organization"
+            placeholder="YOUR ORGANIZATION NAME"
+            class="form-control"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="job-role" class="form-label text-light"
+            >Job Role/Position</label
+          >
+          <select formControlName="jobRole" id="job-role" class="form-select">
+            <option value="" disabled selected>Select a Job Role</option>
+            <option value="developer">Developer</option>
+            <option value="data-scientist">Data Scientist</option>
+            <option value="project-manager">Project Manager</option>
+            <option value="cto">CTO</option>
+          </select>
+          <small
+            class="text-danger"
+            *ngIf="form.get('jobRole')?.invalid && form.get('jobRole')?.touched"
+            >Job Role is required</small
+          >
+        </div>
+
+        <div class="col-md-6">
+          <label for="employment-type" class="form-label text-light"
+            >Employment Type</label
+          >
+          <select
+            formControlName="employmentType"
+            id="employment-type"
+            class="form-select"
+          >
+            <option value="" disabled selected>Select Employment Type</option>
+            <option value="full-time">Full-Time</option>
+            <option value="part-time">Part-Time</option>
+            <option value="contract">Contract</option>
+          </select>
+          <small
+            class="text-danger"
+            *ngIf="
+              form.get('employmentType')?.invalid &&
+              form.get('employmentType')?.touched
+            "
+            >Employment Type is required</small
+          >
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="additional-details" class="form-label text-light"
+          >Additional Details</label
+        >
+        <textarea
+          formControlName="additionalDetails"
+          id="additional-details"
+          rows="4"
+          placeholder="Enter a text"
+          class="form-control"
+        ></textarea>
+        <small
+          class="text-danger"
+          *ngIf="
+            form.get('additionalDetails')?.invalid &&
+            form.get('additionalDetails')?.touched
+          "
+        >
+          {{ form.get('additionalDetails')?.errors?.['required'] ? 'Details are required' : 'Enter at least 10 characters' }}
+        </small>
+      </div>
+
+      <button
+        type="submit"
+        class="btn w-100 btn-gold"
+        [disabled]="form.invalid"
+      >
+        Submit Request
+      </button>
+    </form>
+  </div>
+</section>
