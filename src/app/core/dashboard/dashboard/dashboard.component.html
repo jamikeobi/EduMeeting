@@ -19,12 +19,10 @@
 
     <div class="content">
       <div class="dashboard-item-container">
-        <div
-          style="text-align: center"
-          *ngIf="!formDetailsMap[selectedFormType]?.length"
-        >
-          <h2>No {{ selectedFormType }} Form data has been created yet!!!</h2>
-        </div>
+        <div style="text-align: center" *ngIf="(formDetailsMap[selectedFormType]?.length || 0) === 0">
+            <h2>No {{ selectedFormType }} form data has been created yet!!!</h2>
+          </div>
+          
 
         <div
           class="task-item card"

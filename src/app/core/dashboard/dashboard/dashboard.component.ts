@@ -92,12 +92,30 @@ export class DashboardComponent implements OnInit, AfterViewInit{
 
   // Delete all data of a selected form type
   deleteAllFormData() {
-    const type = this.selectedFormType;
-    this.contactService.deleteAllFormData().subscribe(() => {
-      this.formDetailsMap[type] = [];
-      console.log(`All ${type} form data has been deleted`);
+    if (!this.selectedFormType) {
+      console.error("No form type selected");
+      return;
+    }
+  
+    const formTypeMapping: Record<string, string> = {
+      contact: "contactForm",
+      bookSession: "bookSession",
+      itHiring: "hiring",
+      quote: "quoteForm",
+      techTalent: "techTalent",
+      training: "training"
+    };
+  
+    const firebaseFormType = formTypeMapping[this.selectedFormType] || this.selectedFormType;
+  
+    this.contactService.deleteAllFormData(firebaseFormType).subscribe(() => {
+      this.formDetailsMap[this.selectedFormType] = []; // Clear UI
+      console.log(`All ${firebaseFormType} form data has been deleted`);
+    }, error => {
+      console.error(`Error deleting ${firebaseFormType} form data:`, error);
     });
   }
+  
 
   // Function to switch displayed form type
   selectFormType(type: string) {

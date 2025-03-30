@@ -199,7 +199,8 @@ getTrainingFormDetails(): Observable<TrainingFormDetails[]> {
 
 
 
-  deleteAllFormData(): Observable<any>{
-    return this.http.delete(this.apiUrl);
-  }
+deleteAllFormData(formType: string): Observable<any> {
+  return this.http.delete(`${this.apiUrl}/${formType}.json`);
+}
+
 }
