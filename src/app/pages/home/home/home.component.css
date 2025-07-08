@@ -143,10 +143,10 @@ body {
 /* Ensure the row provides adequate spacing without overflowing */
 .custom-counts-row {
     /* The 'g-4' class in HTML adds horizontal and vertical gaps (gutters) from Bootstrap.
-       This provides the primary spacing between the count boxes.
-    */
+     * This provides the primary spacing between the count boxes.
+     */
     /* With 4 items at 25% each, they perfectly fill the row.
-       'justify-content: center' is kept here for visual centering, though not strictly needed for filling the width. */
+     * 'justify-content: center' is kept here for visual centering, though not strictly needed for filling the width. */
     justify-content: center;
 }
 
@@ -242,9 +242,9 @@ body {
     border: 1px solid #ffd700; /* Add a border to maintain shape on hover */
 }
 #training{
-  background-color: #ffd700; /* Gold/Yellow background */
+    background-color: #ffd700; /* Gold/Yellow background */
     color: #000; /* Black text */
-    border: 1px solid #ffd700; /* Add a border to maintain shape on hover */ 
+    border: 1px solid #ffd700; /* Add a border to maintain shape on hover */
 }
 
 
@@ -371,17 +371,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.slider-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.slider-arrow.left {
-    left: 10px;
-}
-
-.slider-arrow.right {
-    right: 10px;
-}
 .training-item {
     height: 600px; /* Adjust this value as needed based on your content */
     display: flex; /* Still good practice for internal layout */
@@ -392,6 +381,26 @@ body {
     flex-grow: 1;
     overflow: hidden;
 }
-.h-180px {
-    height: 180px; 
+/* In your CSS file */
+#card-content-area {
+    max-height: 200px; /* Adjust this value as needed based on your longest content */
+    /* Optional: Add overflow properties if content might exceed this height */
+    /* overflow: auto; /* Adds scrollbars if content overflows */
+    /* overflow: hidden; /* Hides overflowing content */
 }
+
+/* NEW: Styles for the IT Hiring carousel cards (developer-card-border) */
+.developer-card-border {
+    border: 2px solid #ffd700; /* Apply the border */
+    border-radius: 20px; 
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 95%;/* Apply the border-radius */
+    /* No margin-left here. Bootstrap's g-4 on the row handles the gap */
+    /* If you need more visual space between cards than g-4 provides, consider:
+       1. Increasing the g-class on the row (e.g., g-5, g-xl-5).
+       2. Adding a small amount of horizontal padding to the inner content of the .event-item.
+       The current setup with g-4 and no custom margins should prevent overflow.
+    */
+}
+

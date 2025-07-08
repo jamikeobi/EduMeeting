@@ -1,10 +1,234 @@
-.meetings-page {
-    overflow: visible !important;
-    display: block !important;
-  }
+  /* Custom styles for the section */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
   .down-content {
     overflow: visible !important;
     display: block !important;
     height: auto !important;
   }
-  
+   .meetings-page {
+            padding: 4rem 0;
+            background-color: #ffffff;
+              overflow: visible !important;
+    display: block !important;
+        }
+
+        .body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light grey background */
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .meeting-single-item {
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            overflow: hidden; /* Ensure animations don't overflow */
+        }
+
+        .down-content h4 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .down-content p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .meeting-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.75rem; /* Equivalent to rounded-lg */
+            margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+            display: block; /* Ensure it behaves like a block element */
+        }
+
+        .card {
+            border: none;
+            border-radius: 0.75rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #f7fafc; /* Lighter card background */
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2b6cb0; /* A nice blue for titles */
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        /* Grid layout for cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Default to single column */
+            gap: 1.5rem; /* Equivalent to gap-6 */
+            margin-top: 2rem; /* Equivalent to mt-8 */
+        }
+
+        @media (min-width: 768px) { /* md breakpoint */
+            .card-grid.md-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .card-grid.md-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Carousel specific styles */
+        .carousel-item {
+            padding: 1rem;
+        }
+
+        .carousel-item h6 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+
+        .carousel-item p {
+            font-size: 1rem;
+            color: #4a5568;
+            text-align: center;
+        }
+
+
+        /* Contact Info Cards */
+        .hours, .location, .book-now {
+            text-align: center;
+        }
+
+        .hours h5, .location h5, .book-now h5 {
+            color: #2b6cb0;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .hours p, .location p, .book-now p {
+            font-size: 1rem;
+            color: #4a5568;
+        }
+
+        /* Share section */
+        .share-section { /* Renamed from .share to avoid conflict if any */
+            text-align: center;
+            margin-top: 2rem; /* Equivalent to mt-8 */
+        }
+
+        .share-section h5 {
+            font-size: 1.5rem;
+            color: #2b6cb0;
+            margin-bottom: 1rem;
+        }
+
+        .share-list { /* Renamed from .share ul */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Equivalent to flex */
+            justify-content: center; /* Equivalent to justify-center */
+            gap: 1.5rem; /* Equivalent to gap-6 */
+            margin-top: 1rem; /* Equivalent to mt-4 */
+        }
+
+        .share-list li a {
+            color: #2b6cb0; /* Equivalent to text-blue-700 */
+            text-decoration: none;
+            font-weight: 600; /* Equivalent to font-semibold */
+            transition: color 0.2s ease-in-out; /* Equivalent to transition-colors duration-200 */
+            font-size: 1.1rem;
+        }
+
+        .share-list li a:hover {
+            color: #1a4d80; /* Equivalent to hover:text-blue-900 */
+        }
+
+        /* Return to Services Button */
+        .main-button-red {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .main-button-red a {
+            display: inline-block;
+            background-color: #e53e3e; /* Red button */
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px; /* Fully rounded */
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(229, 62, 62, 0.3);
+        }
+
+        .main-button-red a:hover {
+            background-color: #c53030;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(229, 62, 62, 0.4);
+        }
+
+        /* Animate.css overrides for smoother delays */
+        .animate__animated {
+            --animate-duration: 1s;
+            --animate-delay: 0.5s;
+        }
+        .delay-1s { --animate-delay: 1s; }
+        .delay-2s { --animate-delay: 1.5s; }
+        .delay-3s { --animate-delay: 2s; }
+        .delay-4s { --animate-delay: 2.5s; }
+        .delay-5s { --animate-delay: 3s; } /* Added for the share section */
+        .delay-6s { --animate-delay: 3.5s; } /* Added for the button */
+
+        .text-center-custom { /* Custom class for text-center */
+            text-align: center;
+        }
+
+        .text-xl-custom { /* Custom class for text-xl */
+            font-size: 1.25rem; /* Roughly equivalent to Tailwind's text-xl */
+        }
+
+        .font-bold-custom { /* Custom class for font-bold */
+            font-weight: 700;
+        }
+
+        .mt-8-custom { /* Custom class for mt-8 */
+            margin-top: 2rem;
+        }
