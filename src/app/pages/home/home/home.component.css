@@ -185,6 +185,9 @@ body {
     color: #e0e0e0;
     line-height: 1.4;
 }
+.count-digit::after {
+  content: "+";
+}
 
 /*
  * TRAINING ITEM (SLIDER) STYLES
@@ -391,16 +394,175 @@ body {
 
 /* NEW: Styles for the IT Hiring carousel cards (developer-card-border) */
 .developer-card-border {
-    border: 2px solid #ffd700; /* Apply the border */
+    border: 2px solid #ffd700;  /* Always crisp border */
     border-radius: 20px; 
-    margin-left: 10px;
-    margin-right: 10px;
-    max-width: 95%;/* Apply the border-radius */
-    /* No margin-left here. Bootstrap's g-4 on the row handles the gap */
-    /* If you need more visual space between cards than g-4 provides, consider:
-       1. Increasing the g-class on the row (e.g., g-5, g-xl-5).
-       2. Adding a small amount of horizontal padding to the inner content of the .event-item.
-       The current setup with g-4 and no custom margins should prevent overflow.
-    */
+    padding: 0;                 /* avoid clipping inside */
+    max-width: 100%;
+    box-sizing: border-box;     /* ensure padding/border stay inside width */
+    background: #000;           /* contrast for border if needed */
 }
 
+/* Mobile: remove side margins so border is flush and visible */
+@media (max-width: 800px) {
+    .developer-card-border {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%; /* slightly inset for clean look */
+    }
+}
+
+
+#body {
+            background-color: black;
+            color: #ffd700;
+            font-family: sans-serif;
+        }
+        
+        .events.py-5 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .container.py-5 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .pb-5 {
+            padding-bottom: 3rem;
+        }
+
+        .display-2 {
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
+        
+        .row.g-4 {
+            --bs-gutter-x: 1.5rem;
+        }
+
+        .developer-card-border {
+            border: 2px solid #ffd700;
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgb(255 215 0 / 0.2), 0 2px 4px -2px rgb(255 215 0 / 0.2);
+        }
+
+        .event-item.h-100 {
+            height: 100%;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+        
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+
+        .event-item img {
+            border-radius: 20px;
+            object-fit: cover;
+            height: 250px;
+            width: 100%;
+        }
+
+        .rounded-bottom {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .p-4 {
+            padding: 1.5rem;
+        }
+
+        .h4.mb-3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .mt-auto {
+            margin-top: auto;
+        }
+
+        .event-item .btn {
+            background-color: #ffd700;
+            border: 2px solid black;
+            border-radius: 50px;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 0.5rem 1rem;
+        }
+
+        .event-item .btn:hover {
+            background-color: #ffc107;
+            color: #1a202c;
+        }
+        
+        /* Custom styles for the carousel controls to fit the dark theme */
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-image: none;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: #ffd700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-control-prev-icon::before {
+            content: '❮';
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .carousel-control-next-icon::before {
+            content: '❯';
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: #ffc107;
+        }
+
+        /* Adjust carousel indicators for better visibility */
+        .carousel-indicators [data-bs-target] {
+            box-sizing: content-box;
+            flex: 0 1 auto;
+            width: 30px;
+            height: 3px;
+            padding: 0;
+            margin-right: 3px;
+            margin-left: 3px;
+            text-indent: -999px;
+            cursor: pointer;
+            background-color: #ffd700;
+            background-clip: padding-box;
+            border: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            opacity: .5;
+            transition: opacity .6s ease;
+        }
+
+        .carousel-indicators .active {
+            opacity: 1;
+        }

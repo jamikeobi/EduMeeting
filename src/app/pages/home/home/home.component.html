@@ -44,56 +44,64 @@
 <!-- Banner End -->
 
 <!-- About Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-                <video #bgVideo class="video-content" controls>
-                    <source src="../../../../assets/images/morrhtechVideo2.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
-                <h1 class="text-secondary sub-title fw-bold">About Us</h1>
-                <h3 class="display-3 mb-4">
-                    <p class="mb-20">
-                        Morrhtech Solutions is a leading provider of innovative tech solutions, offering services in web
-                        development, software solutions, IT consulting, and professional training.
-                        Our mission is to empower individuals and businesses with cutting-edge technology and skills for
-                        a brighter digital future. <br><br>
-                        As a proud CompTIA Partner, we ensure globally recognized standards in IT training and
-                        certifications, helping our students and clients achieve unparalleled success in the tech
-                        industry
-                    </p>
-                </h3>
-                <a class="btn  rounded-pill py-3 px-5" routerLink="/about"
-                    style="background-color:  #ffd700;color: black;">Learn More</a>
-            </div>
-        </div>
+<div class="container-fluid py-5" id="about-section">
+   <div class="container-fluid py-5">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+        <video #bgVideo class="video-content" controls>
+          <source src="../../../../assets/images/morrhtechVideo2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <!-- Pause/Play Button -->
+        <button class="btn btn-secondary mt-3" (click)="toggleVideoPlay()">
+          {{ isVideoPlaying ? 'Pause Video' : 'Play Video' }}
+        </button>
+      </div>
+      <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
+        <h1 class="text-secondary sub-title fw-bold">About Us</h1>
+        <h3 class="display-3 mb-4">
+          <p class="mb-20">
+            Morrhtech Solutions is a leading provider of innovative tech solutions, offering services in web
+            development, software solutions, IT consulting, and professional training.
+            Our mission is to empower individuals and businesses with cutting-edge technology and skills for
+            a brighter digital future. <br><br>
+            As a proud CompTIA Partner, we ensure globally recognized standards in IT training and
+            certifications, helping our students and clients achieve unparalleled success in the tech
+            industry
+          </p>
+        </h3>
+        <a class="btn rounded-pill py-3 px-5" routerLink="/about"
+          style="background-color: #ffd700; color: black;">Learn More</a>
+      </div>
     </div>
+  </div>
 </div>
+
+</div>
+
 <!-- About End -->
 
 
 <!-- Counter Facts Start -->
-<div class="row" style="width: 95%; margin-left: 2.5%;">
-    <div class="col-10 col-sm-6 col-md-6 col-lg-3">
+<div class="row" style="width: 100%; justify-content: center; align-items: center; text-align: center;  ">
+    <div class="col-10 col-sm-6 col-md-6 col-lg-3" >
         <div class="count-area-content">
-            <div class="count-digit">205</div>
+            <div class="count-digit">1500</div>
             <div class="count-title">Projects Delivered</div>
             <p>Successful web and software projects completed.</p>
         </div>
     </div>
 
-    <div class="col-10 col-sm-6 col-md-6 col-lg-3">
+    <div class="col-10 col-sm-6 col-md-6 col-lg-3" >
         <div class="count-area-content">
-            <div class="count-digit">307</div>
+            <div class="count-digit">600</div>
             <div class="count-title">Expert Trainers</div>
             <p>Skilled professionals guiding our students.</p>
         </div>
     </div>
 
-    <div class="col-10 col-sm-6 col-md-6 col-lg-3">
+    <div class="col-10 col-sm-6 col-md-6 col-lg-3" >
         <div class="count-area-content">
             <div class="count-digit">5079</div>
             <div class="count-title">Students Trained</div>
@@ -103,7 +111,7 @@
         </div>
     </div>
 
-    <div class="col-10 col-sm-6 col-md-6 col-lg-3">
+    <div class="col-10 col-sm-6 col-md-6 col-lg-3" >
         <div class="count-area-content">
             <div class="count-digit">12</div>
             <div class="count-title">Global Partnerships</div>
@@ -115,7 +123,7 @@
 <!-- Counter Facts End -->
 
 <!-- Training Start -->
-<div class="container-fluid training py-5"> 
+<div class="container-fluid training py-5">
     <hr>
     <div class="container py-5">
         <div class="pb-5">
@@ -141,7 +149,8 @@
                                         style="top: 0; left: 0;"></h1>
                                 </div>
                                 <div class="rounded-bottom border border-top-0 p-4">
-                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: black;">Web Development Workshop</a>
+                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: black;">Web Development
+                                        Workshop</a>
                                     <p style="color: black;">
                                         Build dynamic websites and web applications with hands-on
                                         training. <br> Master the latest web technologies with our expert
@@ -157,17 +166,19 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                             <div class="training-item bg-white rounded">
                                 <div class="training-img rounded-top">
-                                    <a routerLink="/services/mobile-app"><img src="../../../../assets/images/mobileApp.jpg"
-                                            alt="Mobile App Development" class="img-fluid" /></a>
+                                    <a routerLink="/services/mobile-app"><img
+                                            src="../../../../assets/images/mobileApp.jpg" alt="Mobile App Development"
+                                            class="img-fluid" /></a>
                                     <h1 class="fs-1 fw-bold bg-primary text-white d-inline-block rounded p-2 position-absolute"
                                         style="top: 0; left: 0;"></h1>
                                 </div>
                                 <div class="rounded-bottom border border-top-0 p-4">
-                                    <a routerLink="#" class="h4 mb-3 d-block"  style="color: black;">Mobile App Development Training</a>
+                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: black;">Mobile App
+                                        Development Training</a>
                                     <p style="color: black;">
                                         Learn how to develop custom mobile apps for both Android and
                                         iOS platforms.
-                                         Hands-on learning with real-world app development projects.
+                                        Hands-on learning with real-world app development projects.
                                     </p>
                                     <a class="btn btn-primary rounded-pill py-2 px-4 text-dark"
                                         routerLink="/training/mobile-app" id="training"
@@ -186,7 +197,8 @@
                                         style="top: 0; left: 0;"></h1>
                                 </div>
                                 <div class="rounded-bottom border border-top-0 p-4">
-                                    <a routerLink="#" class="h4 mb-3 d-block"  style="color: black;">Cybersecurity Essentials</a>
+                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: black;">Cybersecurity
+                                        Essentials</a>
                                     <p style="color: black;">
                                         Understand the basics of protecting networks, applications,
                                         and data. Gain practical knowledge of the latest cybersecurity tools and
@@ -199,6 +211,16 @@
                             </div>
                         </div>
                     </div>
+                      <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#trainingCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#trainingCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                 </div>
 
                 <div class="carousel-item">
@@ -211,7 +233,8 @@
                                             class="img-fluid" /></a>
                                 </div>
                                 <div class="rounded-bottom border border-top-0 p-4">
-                                    <a routerLink="#" class="h4 mb-3 d-block"  style="color: black;">Data Analysis with Machine Learning</a>
+                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: black;">Data Analysis with
+                                        Machine Learning</a>
                                     <p style="color: black;">
                                         Unlock the power of data with hands-on experience in analysis
                                         and machine learning.Learn how to analyze data and create predictive models.</p>
@@ -232,185 +255,175 @@
                                         style="top: 0; left: 0;"></h1>
                                 </div>
                                 <div class="rounded-bottom border border-top-0 p-4">
-                                    <a routerLink="#" class="h4 mb-3 d-block"  style="color: black;">UI-UX</a>
+                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: black;">UI-UX</a>
                                     <p style="color: black;">
-                                        Our curriculum focuses on User Research, Wireframing & Prototyping, Visual Design, Interaction Design,
-                                         and Usability Testing, with industry-recognized certifications included.
-                                    </p>
-                                    <a class="btn btn-primary rounded-pill py-2 px-4 text-dark" routerLink="/training/ui-ux"
-                                        id="training" style="background-color: #ffd700;">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                            <div class="training-item bg-white rounded">
-                                <div class="training-img rounded-top">
-                                    <a routerLink="/services/mobile-app"><img src="../../../../assets/images/mobileApp.jpg"
-                                            alt="Mobile App Development" class="img-fluid" /></a>
-                                    <h1 class="fs-1 fw-bold bg-primary text-white d-inline-block rounded p-2 position-absolute"
-                                        style="top: 0; left: 0;"></h1>
-                                </div>
-                                <div class="rounded-bottom border border-top-0 p-4">
-                                    <a routerLink="#" class="h4 mb-3 d-block"  style="color: black;">Mobile App Development Training</a>
-                                    <p style="color: black;">
-                                        Learn how to develop custom mobile apps for both Android and
-                                        iOS platforms. <br>
-                                        Hands-on learning with real-world app development projects.
+                                        Our curriculum focuses on User Research, Wireframing & Prototyping, Visual
+                                        Design, Interaction Design,
+                                        and Usability Testing, with industry-recognized certifications included.
                                     </p>
                                     <a class="btn btn-primary rounded-pill py-2 px-4 text-dark"
-                                        routerLink="/training/mobile-app" id="training"
+                                        routerLink="/training/ui-ux" id="training"
                                         style="background-color: #ffd700;">Read More</a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#trainingCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#trainingCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#trainingCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#trainingCarousel" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Training End -->
 <hr>
 <!--IT HIRING-->
-<div class="container-fluid events py-5" style="background-color: black; color: #ffd700;">
-    <div class="container py-5">
-        <div class="pb-5">
-            <div class="row g-4 align-items-end">
-                <div class="col-xl-8">
-                    <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">IT HIRING</h1>
+<div class="container-fluid events py-5" id="body">
+        <div class="container py-5">
+            <div class="pb-5">
+                <div class="row g-4 align-items-end">
+                    <div class="col-xl-8">
+                        <h1 class="display-2 mb-0">IT HIRING</h1>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="itHiringCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
 
-                <div class="carousel-item active">
-                    <div class="row g-4 justify-content-center d-flex align-items-stretch">
-                        <!-- REMOVED: margin-left: 10px; from inline style -->
-                        <!-- ADDED: developer-card-border class -->
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 wow developer-card-border" data-wow-delay="0.1s">
-                            <div class="event-item h-100 d-flex flex-column">
-                                <div class="position-relative">
-                                    <img src="../../../../assets/images/web3.jpeg" class="img-fluid w-100"
-                                         style="padding-top: 10px; border-radius: 20px; object-fit: cover; height: 250px;" alt="Image">
-                                </div>
-                                <!-- Removed border-top-0 here for consistency with other cards if you want full border on card -->
-                                <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
-                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">ANGULAR DEVELOPERS</a>
-                                    <p class="mb-3 flex-grow-1" style="color: #ffd700;">
-                                        Our Angular developers specialize in building dynamic, scalable, and robust web
-                                        applications using the latest Angular framework. With expertise in TypeScript, RxJS, and
-                                        Angular CLI, they can transform your ideas into reality.
-                                    </p>
-                                    <a class="btn py-2 px-4 mt-auto" routerLink="/services/angular-developer"
-                                       style="background-color: #ffd700; border: 2px solid black; border-radius: 50px; color: black;">Read More</a>
+            <!-- Corrected Bootstrap Carousel Structure -->
+            <div id="itHiringCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Carousel Item 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center d-flex align-items-stretch">
+                            <div class="col-12 col-md-8 col-lg-6 developer-card-border">
+                                <div class="event-item h-100 d-flex flex-column">
+                                    <div class="position-relative">
+                                        <img src="../../../../assets/images/webDevelopment.jpg" alt="Web Development" class="img-fluid w-100" alt="Angular Developer">
+                                    </div>
+                                    <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
+                                        <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">ANGULAR DEVELOPERS</a>
+                                        <p class="mb-3 flex-grow-1" style="color: #ffd700;">
+                                            Our Angular developers specialize in building dynamic, scalable, and robust web applications using the latest Angular framework. With expertise in TypeScript, RxJS, and Angular CLI, they can transform your ideas into reality.
+                                        </p>
+                                        <a class="btn py-2 px-4 mt-auto" routerLink="/services/angular-developer">Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- REMOVED: margin-left: 10px; from inline style -->
-                        <!-- ADDED: developer-card-border class -->
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 wow fadeInUp developer-card-border" data-wow-delay="0.3s">
-                            <div class="event-item h-100 d-flex flex-column">
-                                <div class="position-relative">
-                                    <img src="../../../../assets/images/react.jpeg" class="img-fluid w-100"
-                                         style="padding-top: 10px; border-radius: 20px; object-fit: cover; height: 250px;" alt="Image">
-                                </div>
-                                <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
-                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;"> REACT.JS DEVELOPERS</a>
-                                    <p class="mb-3 flex-grow-1" style="color: #ffd700;">
-                                        Our ReactJS developers specialize in building dynamic, scalable, and robust web
-                                        applications using the latest ReactJS framework. With expertise in JavaScript, JSX, and React
-                                        Hooks, they can transform your ideas into reality.
-                                    </p>
-                                    <a class="btn py-2 px-4 mt-auto" routerLink="/services/react-developer"
-                                       style="background-color: #ffd700; border: 2px solid black; border-radius: 50px;color: black;">Read More</a>
+                    <!-- Carousel Item 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center d-flex align-items-stretch">
+                            <div class="col-12 col-md-8 col-lg-6 developer-card-border">
+                                <div class="event-item h-100 d-flex flex-column">
+                                    <div class="position-relative">
+                                        <img src="../../../../assets/images/react.jpg" class="img-fluid w-100" alt="ReactJS Developer">
+                                    </div>
+                                    <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
+                                        <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">REACT.JS DEVELOPERS</a>
+                                        <p class="mb-3 flex-grow-1" style="color: #ffd700;">
+                                            Our ReactJS developers specialize in building dynamic, scalable, and robust web applications using the latest ReactJS framework. With expertise in JavaScript, JSX, and React Hooks, they can transform your ideas into reality.
+                                        </p>
+                                        <a class="btn py-2 px-4 mt-auto" routerLink="/services/react-developer">Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- REMOVED: margin-left: 10px; from inline style -->
-                        <!-- ADDED: developer-card-border class -->
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 wow fadeInUp developer-card-border" data-wow-delay="0.5s">
-                            <div class="event-item h-100 d-flex flex-column">
-                                <div class="position-relative">
-                                    <img src="../../../../assets/images/python.jpeg" class="img-fluid w-100"
-                                         style="padding-top: 10px; border-radius: 20px; object-fit: cover; height: 250px;" alt="Image">
+                    <!-- Carousel Item 3 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center d-flex align-items-stretch">
+                            <div class="col-12 col-md-8 col-lg-6 developer-card-border">
+                                <div class="event-item h-100 d-flex flex-column">
+                                    <div class="position-relative">
+                                        <img src="../../../../assets/images/python.jpg" class="img-fluid w-100" alt="Python Developer">
+                                    </div>
+                                    <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
+                                        <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">PYTHON DEVELOPERS</a>
+                                        <p class="mb-3 flex-grow-1" style="color: #ffd700;">
+                                            Our Python developers specialize in building dynamic, scalable, and robust web applications using the latest Python frameworks. With expertise in Django, Flask, and REST APIs, they can transform your ideas into reality.
+                                        </p>
+                                        <a class="btn py-2 px-4 mt-auto" routerLink="/services/python-developer">Read More</a>
+                                    </div>
                                 </div>
-                                <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
-                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">PYTHON DEVELOPERS</a>
-                                    <p class="mb-3 flex-grow-1" style="color: #ffd700;">
-                                        Our Python developers specialize in building dynamic, scalable, and robust web
-                                        applications using the latest Python frameworks. With expertise in Django, Flask, and REST
-                                        APIs, they can transform your ideas into reality.
-                                    </p>
-                                    <a class="btn py-2 px-4 mt-auto" routerLink="/services/python-developer"
-                                       style="background-color: #ffd700; border: 2px solid black; border-radius: 50px;color: black;">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Item 4 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center d-flex align-items-stretch">
+                            <div class="col-12 col-md-8 col-lg-6 developer-card-border">
+                                <div class="event-item h-100 d-flex flex-column">
+                                    <div class="position-relative">
+                                        <img src="../../../../assets/images/node.jpg" class="img-fluid w-100" alt="NodeJS Developer">
+                                    </div>
+                                    <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
+                                        <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">NODE.JS DEVELOPERS</a>
+                                        <p class="mb-3 flex-grow-1" style="color: #ffd700;">
+                                            Our Node.js developers specialize in building dynamic, scalable, and robust web applications using the latest Node.js technologies. With expertise in Express.js, MongoDB, and RESTful APIs, they can bring your ideas to life.
+                                        </p>
+                                        <a class="btn py-2 px-4 mt-auto" routerLink="services/nodejs-developer">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Item 5 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center d-flex align-items-stretch">
+                            <div class="col-12 col-md-8 col-lg-6 developer-card-border">
+                                <div class="event-item rounded h-100 d-flex flex-column">
+                                    <div class="position-relative">
+                                        <img src="../../../../assets/images/laravel.jpg" class="img-fluid w-100" alt="Laravel Developer">
+                                    </div>
+                                    <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
+                                        <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">LARAVEL DEVELOPERS</a>
+                                        <p class="mb-3 flex-grow-1" style="color: #ffd700;">
+                                            Our Laravel developers specialize in building dynamic, scalable, and robust web applications using the latest Laravel technologies. With expertise in Eloquent ORM, Blade templating, and RESTful APIs, they can turn your ideas into reality.
+                                        </p>
+                                        <a class="btn py-2 px-4 mt-auto" routerLink="/services/laravel-developer">Read More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="carousel-item">
-                    <div class="row g-4 justify-content-center d-flex align-items-stretch">
-                        <!-- REMOVED: margin-left: 10px; from inline style -->
-                        <!-- ADDED: developer-card-border class -->
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 wow fadeInUp developer-card-border" data-wow-delay="0.7s">
-                            <div class="event-item h-100 d-flex flex-column">
-                                <div class="position-relative">
-                                    <img src="../../../../assets/images/nodejs.jpeg" class="img-fluid w-100"
-                                         alt="Image" style="padding-top: 10px; border-radius: 20px; object-fit: cover; height: 250px;">
-                                </div>
-                                <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
-                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">NODE.JS DEVELOPERS</a>
-                                    <p class="mb-3 flex-grow-1" style="color: #ffd700;">
-                                        Our Node.js developers specialize in building dynamic, scalable, and robust web
-                                        applications using the latest Node.js technologies. With expertise in Express.js, MongoDB,
-                                        and RESTful APIs, they can bring your ideas to life.
-                                    </p>
-                                    <a class="btn py-2 px-4 mt-auto" routerLink="services/nodejs-developer"
-                                       style="background-color: #ffd700; border: 2px solid black; border-radius: 50px;color: black;">Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#itHiringCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#itHiringCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
 
-                        <!-- REMOVED: margin-left: 10px; from inline style -->
-                        <!-- ADDED: developer-card-border class -->
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 wow fadeInUp developer-card-border" data-wow-delay="0.7s">
-                            <div class="event-item rounded h-100 d-flex flex-column">
-                                <div class="position-relative">
-                                    <img src="../../../../assets/images/laravel.jpeg" class="img-fluid w-100"
-                                         alt="Image" style="padding-top: 10px; border-radius: 20px; object-fit: cover; height: 250px;">
-                                </div>
-                                <div class="rounded-bottom p-4 d-flex flex-column flex-grow-1">
-                                    <a routerLink="#" class="h4 mb-3 d-block" style="color: #ffd700;">LARAVEL DEVELOPERS</a>
-                                    <p class="mb-3 flex-grow-1" style="color: #ffd700;">
-                                        Our Laravel developers specialize in building dynamic, scalable, and
-                                        robust web applications using the latest Laravel technologies. With
-                                        expertise in Eloquent ORM, Blade templating, and RESTful APIs, they can
-                                        turn your ideas into reality.
-                                    </p>
-                                    <a class="btn py-2 px-4 mt-auto" routerLink="/services/laravel-developer"
-                                       style="background-color: #ffd700; border: 2px solid black; border-radius: 50px;color: black;">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#itHiringCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#itHiringCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#itHiringCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#itHiringCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#itHiringCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    
 
 <!-- IT HIRING ENDS -->
 <hr>
@@ -426,15 +439,21 @@
         </div>
         <div class="row g-4 justify-content-center d-flex align-items-stretch">
             <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="event-item rounded h-100 d-flex flex-column"> <div class="position-relative d-flex flex-column h-100"> <div class="border border-top-0 p-4"
+                <div class="event-item rounded h-100 d-flex flex-column">
+                    <div class="position-relative d-flex flex-column h-100">
+                        <div class="border border-top-0 p-4"
                             style="background-color:black; color: #ffd700; text-align: center;border-radius: 20px;">
                             <img src="../../../../assets/images/itHring.jpeg" class="img-fluid w-100" alt="Image"
-                                style="border-radius: 20px; height: 500px; object-fit: cover;"> <a routerLink="#" class="h4 mb-3 d-block" style="padding-top: 40px; color: #ffd700;">IT STAFF & RECRUITMENT</a>
-                            <div class="content justify-content-between" id="card-content-area"> <h2>Smooth IT Staffing & Recruitment</h2>
+                                style="border-radius: 20px; height: 500px; object-fit: cover;"> <a routerLink="#"
+                                class="h4 mb-3 d-block" style="padding-top: 40px; color: #ffd700;">IT STAFF &
+                                RECRUITMENT</a>
+                            <div class="content justify-content-between" id="card-content-area">
+                                <h2>Smooth IT Staffing & Recruitment</h2>
                                 <p style="color: #ffd700;">
                                     We make hiring IT professionals seamless and efficient for businesses of all sizes.
                                 </p>
-                                <div class="main-button-red anim-slide-bottom mt-auto"> <div class="scroll-to-section" style="padding-bottom: 30px !important">
+                                <div class="main-button-red anim-slide-bottom mt-auto">
+                                    <div class="scroll-to-section" style="padding-bottom: 30px !important">
                                         <a routerLink="/services/it-staffing-recruitment"> Request Staff Now </a>
                                     </div>
                                 </div>
@@ -444,17 +463,23 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="event-item h-100 d-flex flex-column"> <div class="position-relative d-flex flex-column h-100"> <div class="border border-top-0 p-4"
+                <div class="event-item h-100 d-flex flex-column">
+                    <div class="position-relative d-flex flex-column h-100">
+                        <div class="border border-top-0 p-4"
                             style="background-color:black; color: #ffd700; text-align: center;border-radius: 20px;">
 
                             <img src="../../../../assets/images/talent_skill.jpeg" class="img-fluid w-100" alt="Image"
-                                style="border-radius: 20px; height: 500px; object-fit: cover;"> <a routerLink="#" class="h4 mb-3 d-block" style="padding-top: 40px; color: #ffd700;">IT TALENT &   ACQUISITION</a>
-                            <div class="content justify-content-between" id="card-content-area"> <h2>IT Talent <span> Calibrated </span> to Your Needs</h2>
+                                style="border-radius: 20px; height: 500px; object-fit: cover;"> <a routerLink="#"
+                                class="h4 mb-3 d-block" style="padding-top: 40px; color: #ffd700;">IT TALENT &
+                                ACQUISITION</a>
+                            <div class="content justify-content-between" id="card-content-area">
+                                <h2>IT Talent <span> Calibrated </span> to Your Needs</h2>
                                 <p style="color: #ffd700;">
                                     We connect you with highly skilled tech professionals to drive your
                                     business success.
                                 </p>
-                                <div class="main-button-red anim-slide-bottom mt-auto"> <div class="scroll-to-section" style="padding-bottom: 30px !important ;">
+                                <div class="main-button-red anim-slide-bottom mt-auto">
+                                    <div class="scroll-to-section" style="padding-bottom: 30px !important ;">
                                         <a routerLink="/services/it-talent-acquisition">Request Talent Now</a>
                                     </div>
                                 </div>
@@ -467,4 +492,4 @@
     </div>
 </div>
 <!-- Events End -->
- <hr>
+<hr>

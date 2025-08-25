@@ -40,12 +40,18 @@
 
 
 
-.header-area{
-  top: 50px; /* Ensures it starts just below the slider */
-  left: 0;
-  z-index: 999;
+.header-area {
+  position: relative; /* default */
+  z-index: 9999;
 }
 
+.header-area.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
 
 .header-area .btn {
   background-color: #FFD700;
