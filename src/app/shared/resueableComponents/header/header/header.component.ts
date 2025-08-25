@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, Renderer2, HostListener  } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -73,5 +73,17 @@ export class HeaderComponent implements AfterViewInit {
         });
       }
     });
+  }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const header = document.querySelector('.header-area') as HTMLElement;
+    const slider = document.querySelector('app-slider') as HTMLElement;
+    if (!header || !slider) return;
+
+    if (window.scrollY > slider.offsetHeight) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
   }
 }
