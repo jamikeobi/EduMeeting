@@ -1,39 +1,40 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ContactFormDetails } from '../../models/contactForm';
 import { ContactFormService } from '../../services/FormService/contact-form.service';
 import { HttpClient } from '@angular/common/http';
-import { BookSessionFormDetails } from '../../models/bookSession';
-import { ItHiringFormDetails } from '../../models/itHiring';
-import { QuoteFormDetails } from '../../models/quoteForm';
-import { TechTalentFormDetails } from '../../models/techtalent';
-import { TrainingFormDetails } from '../../models/trainingForm';
 
 declare var WOW: any;
 declare var $: any;
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-
-export class DashboardComponent implements OnInit, AfterViewInit{
+export class DashboardComponent implements OnInit, AfterViewInit {
   // Dictionary to store different form details dynamically
   formDetailsMap: Record<string, any[]> = {
     contact: [],
     bookSession: [],
     itHiring: [],
     quote: [],
-    TechTalent: [],
+    techTalent: [],   // lowercase fixed (was TechTalent)
     training: [],
   };
 
   selectedFormType: string = 'contact'; // Default selected form type
+
+  // Pagination state
+  currentPage = 1;
+  itemsPerPage = 10;
+  paginatedForms: any[] = [];
+  totalPages = 1;
 
   constructor(private contactService: ContactFormService, private http: HttpClient) {}
 
   ngOnInit() {
     this.contactService.getContactFormData().subscribe((res) => {
       this.formDetailsMap['contact'] = res;
+      this.updatePagination();
     });
 
     this.contactService.getBookSessionFormDetails().subscribe((res) => {
@@ -55,12 +56,7 @@ export class DashboardComponent implements OnInit, AfterViewInit{
     this.contactService.getTrainingFormDetails().subscribe((res) => {
       this.formDetailsMap['training'] = res;
     });
-
-    
   }
-
-
-
 
   // Delete a single form entry
   showConfirmDialog = false;
@@ -74,13 +70,26 @@ export class DashboardComponent implements OnInit, AfterViewInit{
   confirmDelete() {
     if (this.taskToDelete) {
       const { id, type } = this.taskToDelete;
-      this.http.delete(`https://africantropicalfish-default-rtdb.firebaseio.com/${type}/${id}.json`).subscribe(() => {
-        this.formDetailsMap[type] = this.formDetailsMap[type].filter((form) => form.id !== id);
-        console.log(`Deleted task with id: ${id}`);
-        this.taskToDelete = undefined;
-      });
-    } else {
-      console.log('Task id is undefined');
+
+      // Match frontend types to Firebase paths
+      const formTypeMapping: Record<string, string> = {
+        contact: "contactForm",
+        bookSession: "bookSession",
+        itHiring: "hiring",
+        quote: "quoteForm",
+        techTalent: "techTalent",
+        training: "training"
+      };
+
+      const firebaseFormType = formTypeMapping[type] || type;
+
+      this.http.delete(`${this.contactService['apiUrl']}/${firebaseFormType}/${id}.json`)
+        .subscribe(() => {
+          this.formDetailsMap[type] = this.formDetailsMap[type].filter((form) => form.id !== id);
+          console.log(`Deleted task with id: ${id}`);
+          this.updatePagination();
+          this.taskToDelete = undefined;
+        });
     }
     this.showConfirmDialog = false;
   }
@@ -96,7 +105,7 @@ export class DashboardComponent implements OnInit, AfterViewInit{
       console.error("No form type selected");
       return;
     }
-  
+
     const formTypeMapping: Record<string, string> = {
       contact: "contactForm",
       bookSession: "bookSession",
@@ -105,38 +114,64 @@ export class DashboardComponent implements OnInit, AfterViewInit{
       techTalent: "techTalent",
       training: "training"
     };
-  
+
     const firebaseFormType = formTypeMapping[this.selectedFormType] || this.selectedFormType;
-  
+
     this.contactService.deleteAllFormData(firebaseFormType).subscribe(() => {
       this.formDetailsMap[this.selectedFormType] = []; // Clear UI
       console.log(`All ${firebaseFormType} form data has been deleted`);
+      this.updatePagination();
     }, error => {
       console.error(`Error deleting ${firebaseFormType} form data:`, error);
     });
   }
-  
 
   // Function to switch displayed form type
   selectFormType(type: string) {
     this.selectedFormType = type;
+    this.currentPage = 1;  // reset to first page
+    this.updatePagination();
+  }
+
+  // Pagination logic
+  updatePagination() {
+    const forms = this.formDetailsMap[this.selectedFormType] || [];
+    this.totalPages = Math.max(1, Math.ceil(forms.length / this.itemsPerPage));
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    this.paginatedForms = forms.slice(startIndex, endIndex);
+  }
+
+  nextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.updatePagination();
+    }
+  }
+
+  prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.updatePagination();
+    }
   }
 
   ngAfterViewInit(): void {
     // Initialize WOW.js
- new WOW().init();
+    new WOW().init();
 
- // Initialize OwlCarousel
- $('.owl-carousel').owlCarousel({
-   loop: false,
-   margin: 10,
-   nav: true,
-   responsive: {
-     0: { items: 2 },
-     600: { items: 3 },
-     1000: { items: 5 }
-   }
- });
-}
+    // Initialize OwlCarousel
+    $('.owl-carousel').owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: { items: 2 },
+        600: { items: 3 },
+        1000: { items: 5 }
+      }
+    });
+  }
+
 
 }

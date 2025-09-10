@@ -35,6 +35,7 @@ import { ItHiringInfoComponent } from './pages/services/itHiring/it-hiring-info/
 import { HttpClientModule } from '@angular/common/http';
 import { TalentFormComponent } from './pages/services/techTalent/talent-form/talent-form.component';
 import { DashboardComponent } from './core/dashboard/dashboard/dashboard.component';
+import { LoginDashboardComponent } from './core/login-dashboard/login-dashboard.component';
 
 
 
@@ -70,7 +71,8 @@ import { DashboardComponent } from './core/dashboard/dashboard/dashboard.compone
     QouteFormComponent,
     ItHiringInfoComponent,
     TalentFormComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginDashboardComponent
   ],
   imports: [
     BrowserModule,

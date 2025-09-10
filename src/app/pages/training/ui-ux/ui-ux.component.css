@@ -40,6 +40,12 @@
     line-height: 1.6;
     color: #000;
     padding: 15px;
+    
+  overflow-y: visible !important;   /* Prevent clipping */
+  max-height: none !important;      /* Allow content to grow fully */
+  display: block !important;        /* Ensure paragraphs flow */
+
+
 }
 
 /* Responsive adjustments */

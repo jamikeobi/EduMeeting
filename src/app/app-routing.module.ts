@@ -24,6 +24,8 @@ import { BookSessionComponent } from './shared/resueableComponents/header/book-s
 import { QouteFormComponent } from './pages/services/softwareDevelopment/qoute-form/qoute-form.component';
 import { ItHiringInfoComponent } from './pages/services/itHiring/it-hiring-info/it-hiring-info.component';
 import { DashboardComponent } from './core/dashboard/dashboard/dashboard.component';
+import { LoginDashboardComponent } from './core/login-dashboard/login-dashboard.component';
+import { AuthGuard } from './core/services/auth/auth.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -58,7 +60,10 @@ const routes: Routes = [
   {path: 'training/data-analysis', component: DataAnalyticsComponent},
   {path: 'training/cyber-security', component: CyberSecurityComponent},
   {path: 'training/ui-ux', component: UIUXComponent},
-  {path: 'DC', component: DashboardComponent}
+  {path: 'DC', component: DashboardComponent},
+   { path: 'login-dashboard', component: LoginDashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({
