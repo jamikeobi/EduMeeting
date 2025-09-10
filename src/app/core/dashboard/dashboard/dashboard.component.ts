@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ContactFormService } from '../../services/FormService/contact-form.service';
 import { HttpClient } from '@angular/common/http';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 declare var WOW: any;
 declare var $: any;
@@ -17,7 +19,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     bookSession: [],
     itHiring: [],
     quote: [],
-    techTalent: [],   // lowercase fixed (was TechTalent)
+    techTalent: [],
     training: [],
   };
 
@@ -156,6 +158,51 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
   }
 
+  // ✅ Export selected form data to PDF
+  downloadPDF() {
+    const doc = new jsPDF();
+
+    // Title
+    doc.setFontSize(16);
+    doc.text(
+      `${this.selectedFormType.charAt(0).toUpperCase() + this.selectedFormType.slice(1)} Form Records`,
+      14,
+      20
+    );
+
+    // Get current form data
+    const records = this.formDetailsMap[this.selectedFormType] || [];
+
+    if (records.length === 0) {
+      doc.text('No records found.', 14, 30);
+    } else {
+      // Extract headers dynamically
+      const headers = Object.keys(records[0]).map((key) => this.formatHeader(key));
+
+      // Extract rows
+      const body = records.map((record) =>
+        Object.keys(record).map((key) => record[key] || '')
+      );
+
+      autoTable(doc, {
+        head: [headers],
+        body: body,
+        startY: 30,
+        styles: { fontSize: 9, cellPadding: 2 },
+        headStyles: { fillColor: [0, 123, 255] }, // Blue table header
+        alternateRowStyles: { fillColor: [240, 240, 240] } // Zebra rows
+      });
+    }
+
+    // Save file
+    doc.save(`${this.selectedFormType}_records.pdf`);
+  }
+
+  // ✅ Utility to make headers more readable
+  private formatHeader(key: string): string {
+    return key.replace(/([A-Z])/g, ' $1').replace(/^./, (s) => s.toUpperCase());
+  }
+
   ngAfterViewInit(): void {
     // Initialize WOW.js
     new WOW().init();
@@ -172,6 +219,4 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       }
     });
   }
-
-
 }

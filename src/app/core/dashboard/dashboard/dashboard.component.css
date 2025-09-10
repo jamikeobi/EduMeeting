@@ -225,3 +225,18 @@ hr{
     height: 100px;
     margin-top: 20px;
 }
+.download-btn {
+  margin: 10px 0;
+  padding: 10px 18px;
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #e6c200;
+}
