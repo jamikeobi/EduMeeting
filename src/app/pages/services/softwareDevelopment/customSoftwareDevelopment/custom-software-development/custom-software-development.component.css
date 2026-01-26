@@ -125,3 +125,12 @@
     }
   }
   
+    .par a {
+      color: #FFD700 !important;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  
+    .par a:hover {
+      color: #FFD700;
+    }

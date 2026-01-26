@@ -1,4 +1,4 @@
-<div class="contact-us py-5" id="form">
+<section class="contact-us py-5 meetings-page" id="form">
     <div class="container">
       <h2
         class="text-center text-light fw-bold mb-4"
@@ -68,6 +68,8 @@
               <option value="cyber-security">Cyber Security</option>
               <option value="data-analysis">Data Analysis</option>
               <option value="ui-ux">UI/UX</option>
+              <option value="virtual-assistant">Virtual Assistant</option>
+              <option value="ai-ml">AI & ML</option>
             </select>
             <small class="text-danger" *ngIf="enrollForm.get('jobRole')?.invalid && enrollForm.get('jobRole')?.touched">
               Course selection is required
@@ -99,5 +101,5 @@
       </form>
       
     </div>
-  </div>
+  </section>
   

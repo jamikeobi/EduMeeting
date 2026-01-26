@@ -1,0 +1,103 @@
+/* Certifications Section */
+.cert-section {
+    background-color: #f8f9fa;
+    /* Light classic background */
+    padding: 60px 0;
+}
+
+.cert-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    height: 100%;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    border-color: #FFD700;
+}
+
+.cert-card img.card-img-top {
+    height: 140px;
+    object-fit: contain;
+    padding: 20px 30px 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.cert-card .card-body {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card .card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #2c3e50;
+    /* Dark classic gray */
+    margin-bottom: 12px;
+}
+
+.cert-card .card-text {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.cert-card .tags {
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+}
+
+.cert-card .badge {
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: small;
+    font-weight: 1000;
+    padding: 0.4em 0.8em;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border-radius: 20px;
+}
+
+.cert-card .btn-learn-more {
+    font-weight: 600;
+    background-color: #FFD700;
+    padding: 10px 24px;
+    border-radius: 50px;
+    color: black;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+}
+
+.cert-card .btn-learn-more:hover {
+    background-color: #FFD700;
+    transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .cert-card img.card-img-top {
+        height: 120px;
+        padding: 15px 20px 8px;
+    }
+
+    .cert-card .card-title {
+        font-size: 1.2rem;
+    }
+}
+
+ .course-header {
+     font-size: 2rem;
+     font-weight: bold;
+     color: #FFD700;
+     text-transform: uppercase;
+     margin-bottom: 20px;
+ }

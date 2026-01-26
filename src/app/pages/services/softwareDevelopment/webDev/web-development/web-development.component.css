@@ -5,7 +5,15 @@
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
   }
-  
+        .par a {
+          color: #FFD700 !important;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+    
+        .par a:hover {
+          color: #FFD700;
+        }
   .web-development-services h3 {
     margin-top: 20px;
     color: #FFD700;

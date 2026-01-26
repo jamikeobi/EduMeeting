@@ -36,6 +36,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { TalentFormComponent } from './pages/services/techTalent/talent-form/talent-form.component';
 import { DashboardComponent } from './core/dashboard/dashboard/dashboard.component';
 import { LoginDashboardComponent } from './core/login-dashboard/login-dashboard.component';
+import { VirtualAssistanceComponent } from './pages/training/virtual-assistance/virtual-assistance.component';
+import { ArtificialIntelligenceComponent } from './pages/training/artificial-intelligence/artificial-intelligence.component';
+import { DiscoverComponent } from './pages/training/cyber-security/discover/discover.component';
+import { APlusCyberComponent } from './pages/training/cyber-security/discover/a-plus-cyber/a-plus-cyber.component';
+import { CertificationKitComponent } from './pages/training/cyber-security/discover/certification-kit/certification-kit.component';
+import { ContinuingEducationComponent } from './pages/training/cyber-security/discover/continuing-education/continuing-education.component';
+import { CyberDefenseComponent } from './pages/training/cyber-security/discover/cyber-defense/cyber-defense.component';
+import { CysaPlusComponent } from './pages/training/cyber-security/discover/cysa-plus/cysa-plus.component';
+import { EthicalHackingComponent } from './pages/training/cyber-security/discover/ethical-hacking/ethical-hacking.component';
+import { PentestComponent } from './pages/training/cyber-security/discover/pentest/pentest.component';
+import { SecAIComponent } from './pages/training/cyber-security/discover/sec-ai/sec-ai.component';
+import { SecOTComponent } from './pages/training/cyber-security/discover/sec-ot/sec-ot.component';
+import { SecurityPlusComponent } from './pages/training/cyber-security/discover/security-plus/security-plus.component';
+import { SecurityProComponent } from './pages/training/cyber-security/discover/security-pro/security-pro.component';
+import { SecurityXComponent } from './pages/training/cyber-security/discover/security-x/security-x.component';
 
 
 
@@ -72,7 +87,22 @@ import { LoginDashboardComponent } from './core/login-dashboard/login-dashboard.
     ItHiringInfoComponent,
     TalentFormComponent,
     DashboardComponent,
-    LoginDashboardComponent
+    LoginDashboardComponent,
+    VirtualAssistanceComponent,
+    ArtificialIntelligenceComponent,
+    DiscoverComponent,
+    APlusCyberComponent,
+    CertificationKitComponent,
+    ContinuingEducationComponent,
+    CyberDefenseComponent,
+    CysaPlusComponent,
+    EthicalHackingComponent,
+    PentestComponent,
+    SecAIComponent,
+    SecOTComponent,
+    SecurityPlusComponent,
+    SecurityProComponent,
+    SecurityXComponent
   ],
   imports: [
     BrowserModule,

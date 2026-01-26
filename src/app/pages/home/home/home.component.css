@@ -566,3 +566,82 @@ body {
         .carousel-indicators .active {
             opacity: 1;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* Base styles for all training images */
+                .training-img {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    padding-top: 56.25%;
+                    /* 16:9 aspect ratio – change to 75% for 4:3, 100% for 1:1, etc. */
+                    background-color: #f0f0f0;
+                    /* fallback color while loading */
+                }
+        
+                .training-img img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    /* or contain / fill – cover is usually best for training cards */
+                    object-position: center;
+                    transition: transform 0.3s ease;
+                    /* optional hover effect */
+                }
+        
+                /* Optional: subtle zoom on hover */
+                .training-item:hover .training-img img {
+                    transform: scale(1.08);
+                }
+        
+                /* Responsive adjustments – fine-tune heights if needed */
+                @media (max-width: 1024px) {
+                    .training-img {
+                        padding-top: 60%;
+                        /* slightly taller on tablets if desired */
+                    }
+                }
+        
+                @media (max-width: 768px) {
+                    .training-img {
+                        padding-top: 65%;
+                        /* even taller for better mobile look */
+                    }
+                }
+        
+                @media (max-width: 576px) {
+                    .training-img {
+                        padding-top: 70%;
+                        /* mobile-first friendly */
+                    }
+                }
+        
+                @media (max-width: 400px) {
+                    .training-img {
+                        padding-top: 75%;
+                        /* very small screens – almost square */
+                    }
+                }
